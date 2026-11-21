@@ -1,0 +1,336 @@
+{
+ "question": "Why are California beaches getting smaller?",
+ "model": "claude-haiku-5-5",
+ "cost_usd": 0.0052,
+ "steps": [
+  {
+   "n": 1,
+   "thought": "Start with a catalog keyword search on the patron's question about California beaches shrinking to find relevant records and their subject headings.",
+   "action": "search_catalog",
+   "args": {
+    "query": "California beaches erosion"
+   },
+   "observation": "[1] Laws relating to State reconstruction and reemployment commission, state planning, ocean beaches, beach and cliff erosion (1946) · class HC107.C2 A5 1946 · subjects: California--State Reconstruction and Reemployment Commission; California--Post war public works review board; City planning--California; Regional planning--California; Land subdivision--California; California--Economic policy\n[2] Contributions from the Scripps Institution of Oceanography (1938) · class GC1 .C32 · subjects: Oceanography--Periodicals; Marine biology--Periodicals",
+   "raw": [
+    {
+     "title": "Laws relating to State reconstruction and reemployment commission, state planning, ocean beaches, beach and cliff erosion",
+     "year": "1946",
+     "class": "HC107.C2 A5 1946",
+     "lccn": "46027115",
+     "subjects": [
+      "California--State Reconstruction and Reemployment Commission",
+      "California--Post war public works review board",
+      "City planning--California",
+      "Regional planning--California",
+      "Land subdivision--California",
+      "California--Economic policy"
+     ]
+    },
+    {
+     "title": "Contributions from the Scripps Institution of Oceanography",
+     "year": "1938",
+     "class": "GC1 .C32",
+     "lccn": "42043485",
+     "subjects": [
+      "Oceanography--Periodicals",
+      "Marine biology--Periodicals"
+     ]
+    }
+   ],
+   "seconds": 3.4
+  },
+  {
+   "n": 2,
+   "thought": "The first search returned a 1946 state report on beach and cliff erosion and a Scripps record; I'll check the subject heading 'Beach erosion--California' to find broader, narrower and related headings.",
+   "action": "search_by_subject",
+   "args": {
+    "heading": "Beach erosion--California"
+   },
+   "observation": "[1] Final report to the Legislature (1955) · class TC345.U6 C25 1955 · subjects: Shore protection--California; Beach erosion--California\n[2] Final report to the Legislature (1957) · class TC345.U6 C25 1957 · subjects: Beaches; Erosion; Shore protection--California\n[3] Beach erosion at Santa Barbara, Calif (1938) · class TC225.S25 A4 1938 · subjects: Coast changes--California--Santa Barbara; Beach erosion--California--Santa Barbara; Shore protection--California--Santa Barbara\n[4] Estimating the potential economic impacts of climate change on southern California beaches : final paper (2009) · class GB458.8 · subjects: Beach erosion--Economic aspects--California, Southern--Forecasting; Climatic changes--California, Southern--Forecasting; Coast changes--California, Southern--Forecasting; Sea level--Economic aspects--California, Southern--Forecasting; California, Southern--Environmental conditions--Forecasting\n[5] Estimating the potential economic impacts of climate change on southern California beaches : final paper (2009) · class GB458.8 .E85 2009 · subjects: Coast changes--California, Southern--Forecasting; Sea level--Economic aspects--California, Southern--Forecasting; Beach erosion--Economic aspects--California, Southern--Forecasting; Climatic changes--California, Southern--Forecasting; California, Southern--Environmental conditions--Forecasting",
+   "raw": [
+    {
+     "title": "Final report to the Legislature",
+     "year": "1955",
+     "class": "TC345.U6 C25 1955",
+     "lccn": "55062622",
+     "subjects": [
+      "Shore protection--California",
+      "Beach erosion--California"
+     ]
+    },
+    {
+     "title": "Final report to the Legislature",
+     "year": "1957",
+     "class": "TC345.U6 C25 1957",
+     "lccn": "57063645",
+     "subjects": [
+      "Beaches",
+      "Erosion",
+      "Shore protection--California"
+     ]
+    },
+    {
+     "title": "Beach erosion at Santa Barbara, Calif",
+     "year": "1938",
+     "class": "TC225.S25 A4 1938",
+     "lccn": "38026391",
+     "subjects": [
+      "Coast changes--California--Santa Barbara",
+      "Beach erosion--California--Santa Barbara",
+      "Shore protection--California--Santa Barbara"
+     ]
+    },
+    {
+     "title": "Estimating the potential economic impacts of climate change on southern California beaches : final paper",
+     "year": "2009",
+     "class": "GB458.8",
+     "lccn": "2023712034",
+     "subjects": [
+      "Beach erosion--Economic aspects--California, Southern--Forecasting",
+      "Climatic changes--California, Southern--Forecasting",
+      "Coast changes--California, Southern--Forecasting",
+      "Sea level--Economic aspects--California, Southern--Forecasting",
+      "California, Southern--Environmental conditions--Forecasting"
+     ]
+    },
+    {
+     "title": "Estimating the potential economic impacts of climate change on southern California beaches : final paper",
+     "year": "2009",
+     "class": "GB458.8 .E85 2009",
+     "lccn": "2010413857",
+     "subjects": [
+      "Coast changes--California, Southern--Forecasting",
+      "Sea level--Economic aspects--California, Southern--Forecasting",
+      "Beach erosion--Economic aspects--California, Southern--Forecasting",
+      "Climatic changes--California, Southern--Forecasting",
+      "California, Southern--Environmental conditions--Forecasting"
+     ]
+    }
+   ],
+   "seconds": 3.1
+  },
+  {
+   "n": 3,
+   "thought": "The subject search turned up several California beach erosion records, so I'll browse the heading 'Beach erosion--California' to find its broader, narrower and related headings before choosing where to look next.",
+   "action": "browse_heading",
+   "args": {
+    "heading": "Beach erosion--California"
+   },
+   "observation": "'Beach erosion--California' is a subdivided heading (main heading plus subdivisions), so it has no entry of its own. Showing its main heading.\nHeading: Beach erosion\nBroader: Erosion\nNarrower: none\nRelated: none\nOther matching headings: Beach erosion--Monitoring; Beach erosion--Monitoring--Washington (State); Shore protection",
+   "raw": {
+    "heading": "Beach erosion",
+    "uri": "http://id.loc.gov/authorities/subjects/sh85012599",
+    "broader": [
+     "Erosion"
+    ],
+    "narrower": [],
+    "related": [],
+    "other_matches": [
+     "Beach erosion--Monitoring",
+     "Beach erosion--Monitoring--Washington (State)",
+     "Shore protection"
+    ],
+    "note": "'Beach erosion--California' is a subdivided heading (main heading plus subdivisions), so it has no entry of its own. Showing its main heading."
+   },
+   "seconds": 3.3
+  },
+  {
+   "n": 4,
+   "thought": "The heading browse shows no narrower or related terms, so I'll search public-domain texts at the Internet Archive for pre-1929 writing on California beach erosion and its causes.",
+   "action": "find_free_text",
+   "args": {
+    "query": "subject:(beach erosion) AND subject:(California)"
+   },
+   "observation": "No public-domain texts found.",
+   "raw": [],
+   "seconds": 2.4
+  },
+  {
+   "n": 5,
+   "thought": "The public-domain search with two subject terms found nothing, so I'll browse the shelf near GB459, the coastal-erosion area of the call-number scheme, to find related books I can search or read.",
+   "action": "browse_shelf",
+   "args": {
+    "call_number_prefix": "GB459"
+   },
+   "observation": "[1] Shorelines past and present : proceedings of the fifth Symposium on Coastal Sedimentology, 25-26 January 1980 (1980) · class GB459.4 .S95 1980 · subjects: Shorelines--Florida--Congresses; Coast changes--Florida--Congresses\n[2] Beach and vegetation-line changes at Galveston Island, Texas : erosion, deposition, and recovery from hurricane Alicia (1985) · class TN24.T4 T38 no. 85-5 GB459.25 · subjects: Beach erosion--Texas--Galveston Island; Coast changes--Texas--Galveston Island; Hurricane Alicia, 1983\n[3] Summary of Workshop on Costal [sic] Vulnerability : Havana, Cuba, May 2-5, 1986 (1987) · class GB459.17 .W67 1986 · subjects: Coast changes--Caribbean Area--Congresses; Natural disasters--Caribbean Area--Congresses\n[4] Atlantic beaches (1972) · class GB459.4 .L46 · subjects: Natural history--Northeastern states; Atlantic Coast (U.S.)\n[5] Lake Erie shore erosion and flooding, Lucas County, Ohio (1978) · class QE151 .A186 no. 107 GB459.5.E73 · subjects: Coast changes--Lake Erie; Erosion--Ohio--Lucas Co; Floods--Ohio--Lucas Co\n[6] Breaching of a beach ridge and the formation of beach cusps (1982) · class GB459.6 .P96 1982 · subjects: Beaches--Québec (Province)--Gaspé Peninsula\n[7] Lessons from the sand : family-friendly science activities you can do on a Carolina beach (2016) · class GB459.4 .P55 2016 · subjects: Beaches--Study and teaching--North Carolina; Beaches--Study and teaching--South Carolina; Science--Experiments\n[8] Modern depositional environments of the Texas coast (1980) · class GB459.4 .M67 · subjects: Sedimentation and deposition; Gulf Coast (Tex.)",
+   "raw": [
+    {
+     "title": "Shorelines past and present : proceedings of the fifth Symposium on Coastal Sedimentology, 25-26 January 1980",
+     "year": "1980",
+     "class": "GB459.4 .S95 1980",
+     "lccn": "80152116",
+     "subjects": [
+      "Shorelines--Florida--Congresses",
+      "Coast changes--Florida--Congresses"
+     ]
+    },
+    {
+     "title": "Beach and vegetation-line changes at Galveston Island, Texas : erosion, deposition, and recovery from hurricane Alicia",
+     "year": "1985",
+     "class": "TN24.T4 T38 no. 85-5 GB459.25",
+     "lccn": "87620647",
+     "subjects": [
+      "Beach erosion--Texas--Galveston Island",
+      "Coast changes--Texas--Galveston Island",
+      "Hurricane Alicia, 1983"
+     ]
+    },
+    {
+     "title": "Summary of Workshop on Costal [sic] Vulnerability : Havana, Cuba, May 2-5, 1986",
+     "year": "1987",
+     "class": "GB459.17 .W67 1986",
+     "lccn": "88166098",
+     "subjects": [
+      "Coast changes--Caribbean Area--Congresses",
+      "Natural disasters--Caribbean Area--Congresses"
+     ]
+    },
+    {
+     "title": "Atlantic beaches",
+     "year": "1972",
+     "class": "GB459.4 .L46",
+     "lccn": "72079775",
+     "subjects": [
+      "Natural history--Northeastern states",
+      "Atlantic Coast (U.S.)"
+     ]
+    },
+    {
+     "title": "Lake Erie shore erosion and flooding, Lucas County, Ohio",
+     "year": "1978",
+     "class": "QE151 .A186 no. 107 GB459.5.E73",
+     "lccn": "79626099",
+     "subjects": [
+      "Coast changes--Lake Erie",
+      "Erosion--Ohio--Lucas Co",
+      "Floods--Ohio--Lucas Co"
+     ]
+    },
+    {
+     "title": "Breaching of a beach ridge and the formation of beach cusps",
+     "year": "1982",
+     "class": "GB459.6 .P96 1982",
+     "lccn": "84190870",
+     "subjects": [
+      "Beaches--Québec (Province)--Gaspé Peninsula"
+     ]
+    },
+    {
+     "title": "Lessons from the sand : family-friendly science activities you can do on a Carolina beach",
+     "year": "2016",
+     "class": "GB459.4 .P55 2016",
+     "lccn": "2015040682",
+     "subjects": [
+      "Beaches--Study and teaching--North Carolina",
+      "Beaches--Study and teaching--South Carolina",
+      "Science--Experiments"
+     ]
+    },
+    {
+     "title": "Modern depositional environments of the Texas coast",
+     "year": "1980",
+     "class": "GB459.4 .M67",
+     "lccn": "80624314",
+     "subjects": [
+      "Sedimentation and deposition",
+      "Gulf Coast (Tex.)"
+     ]
+    }
+   ],
+   "seconds": 3.5
+  },
+  {
+   "n": 6,
+   "thought": "The subject-restricted public-domain search found nothing, so I'll try a looser free-text search for pre-1929 writing on beach erosion and shoreline change in California.",
+   "action": "find_free_text",
+   "args": {
+    "query": "beach erosion California shore sand"
+   },
+   "observation": "No public-domain texts found.",
+   "raw": [],
+   "seconds": 3.7
+  },
+  {
+   "n": 7,
+   "thought": "Both public-domain searches came back empty, so I'll try the related heading 'Coast changes' paired with California, which may catch pre-1929 shoreline writing that uses different wording.",
+   "action": "find_free_text",
+   "args": {
+    "query": "subject:(coast changes) AND subject:(California)"
+   },
+   "observation": "(No exact matches; showing a looser search on the same words.)\n[NPCM19210111] China Mail 1921-01-11 (1921)\n[EPE_1926093001] Empress express (1926-09-30) (1926)\n[NPDP19270921] Hong Kong Daily Press 1927-09-21 (1927)\n[seacoasterosionr00headrich] Sea-coast erosion and remedial works (1904)\n[csdhi_000091] Charlotte Baker's 1924 Diary (1924)",
+   "raw": [
+    {
+     "date": "1921-01-11T00:00:00Z",
+     "identifier": "NPCM19210111",
+     "title": "China Mail 1921-01-11"
+    },
+    {
+     "date": "1926-09-30T00:00:00Z",
+     "identifier": "EPE_1926093001",
+     "title": "Empress express (1926-09-30)"
+    },
+    {
+     "date": "1927-09-21T00:00:00Z",
+     "identifier": "NPDP19270921",
+     "title": "Hong Kong Daily Press 1927-09-21"
+    },
+    {
+     "creator": "Headley, Rowland George Allanson-Winn, Baron, 1855-1935",
+     "date": "1904-01-01T00:00:00Z",
+     "identifier": "seacoasterosionr00headrich",
+     "title": "Sea-coast erosion and remedial works"
+    },
+    {
+     "creator": "Baker, Charlotte L.",
+     "date": "1924-01-01T00:00:00Z",
+     "identifier": "csdhi_000091",
+     "title": "Charlotte Baker's 1924 Diary"
+    }
+   ],
+   "seconds": 3.9
+  },
+  {
+   "n": 8,
+   "thought": "The searches found no pre-1929 California beach texts, but the 1904 'Sea-coast erosion and remedial works' is a public-domain book on general coastal erosion causes, so I'll read it for the mechanisms it describes.",
+   "action": "read_text",
+   "args": {
+    "identifier": "seacoasterosionr00headrich",
+    "question": "What causes sea-coast erosion, such as waves, currents, sand supply, and human interference, and what remedies are described?"
+   },
+   "observation": "Sea-coast erosion and remedial works\n(page 15 of the scan) and such headland or across such and such estuary they should be received with caution. In very rough weather the sea is almost always discoloured for a greater or less distance from the shore, the discolouration indicating the presence of matter held in suspension, which matter is of the colour of the neighbouring cliffs or sands. Thus we observe, in stormy weather off the Yorkshire coast, the discolouration is of a chocolate hue — the eroded cliffs being of a dark reddish brown. As we proceed further south towards Gibraltar Point this colour changes to a more sandy tint, and this change is still further accentuated as we reach Yarmouth and Lowestoft. Off Dover we perceive the milky colour of the sea, and at once put it down to the erosion of the chalk cliffs. In all such cases material is travel ling, and it is equally certain that it will be sooner or later deposited somewhere; where \n\n(page 41 of the scan) on the visible shore, until the waves again beat on the far inland chalk cliffs, as it may be conjectured they did prior to the glacial deposit of which the lands of Holderness are composed. The history of our coast line is not without instances of a retrograde movement on the part of the sea, and it is of course possible that influences which we cannot at present understand or foresee may turn the present annual loss into a gain. All we can do nowr is to study the past and present rates of erosion, the causes of that erosion, and design our protective devices so as to retard the sea's advance as far as possible at the lowest cost. Sections taken from the coast line in a north-easterly direction, Fig. 14, show a re- markable uniformity. All down the forty or fifty miles of coast the 5-fathom line is formed at a mile from the shore, and this, taken in conjunction with the other evidences ",
+   "raw": {
+    "identifier": "seacoasterosionr00headrich",
+    "title": "Sea-coast erosion and remedial works",
+    "url": "https://archive.org/details/seacoasterosionr00headrich",
+    "passages": [
+     {
+      "page": 15,
+      "text": "and such headland or across such and such estuary they should be received with caution. In very rough weather the sea is almost always discoloured for a greater or less distance from the shore, the discolouration indicating the presence of matter held in suspension, which matter is of the colour of the neighbouring cliffs or sands. Thus we observe, in stormy weather off the Yorkshire coast, the discolouration is of a chocolate hue — the eroded cliffs being of a dark reddish brown. As we proceed further south towards Gibraltar Point this colour changes to a more sandy tint, and this change is still further accentuated as we reach Yarmouth and Lowestoft. Off Dover we perceive the milky colour of the sea, and at once put it down to the erosion of the chalk cliffs. In all such cases material is travel ling, and it is equally certain that it will be sooner or later deposited somewhere; where "
+     },
+     {
+      "page": 41,
+      "text": "on the visible shore, until the waves again beat on the far inland chalk cliffs, as it may be conjectured they did prior to the glacial deposit of which the lands of Holderness are composed. The history of our coast line is not without instances of a retrograde movement on the part of the sea, and it is of course possible that influences which we cannot at present understand or foresee may turn the present annual loss into a gain. All we can do nowr is to study the past and present rates of erosion, the causes of that erosion, and design our protective devices so as to retard the sea's advance as far as possible at the lowest cost. Sections taken from the coast line in a north-easterly direction, Fig. 14, show a re- markable uniformity. All down the forty or fifty miles of coast the 5-fathom line is formed at a mile from the shore, and this, taken in conjunction with the other evidences "
+     }
+    ]
+   },
+   "seconds": 7.0
+  },
+  {
+   "n": 9,
+   "thought": "The searches found no pre-1929 California beach texts, so the answer relies on one general 1904 British source and must say so.",
+   "action": "answer",
+   "answer": "I could not find a public-domain text (pre-1929) that addresses why California beaches are shrinking, so this answer is necessarily general and dated. The 1904 'Sea-coast erosion and remedial works' describes the basic mechanism: waves and currents carry eroded cliff and sand material offshore, and it is 'sooner or later deposited somewhere' (Sea-coast erosion and remedial works, p. 15). It also notes that coastal loss is a continuing retreat of the shoreline, and that the remedy is to study past and present erosion rates and causes and then design protective works (Sea-coast erosion and remedial works, p. 41). The passages are about the English coast, not California, and they do not mention modern drivers such as sea-level rise, dams that trap sand, or seawalls, so they should not be taken as an explanation for California. For California-specific reading, the catalog's 2009 study on climate change and southern California beaches (GB458.8 .E85 2009) addresses sea-level rise and is more current, and the 1955 and 1957 'Final report to the Legislature' records (TC345.U6 C25) and the 1938 'Beach erosion at Santa Barbara' (TC225.S25 A4 1938) are older state and local studies worth requesting from the stacks, though I did not read them.",
+   "records": [
+    "Estimating the potential economic impacts of climate change on southern California beaches : final paper (2009), GB458.8 .E85 2009",
+    "Final report to the Legislature (1955), TC345.U6 C25 1955",
+    "Final report to the Legislature (1957), TC345.U6 C25 1957",
+    "Beach erosion at Santa Barbara, Calif (1938), TC225.S25 A4 1938",
+    "Laws relating to State reconstruction and reemployment commission, state planning, ocean beaches, beach and cliff erosion (1946), HC107.C2 A5 1946",
+    "Sea-coast erosion and remedial works (1904), Internet Archive seacoasterosionr00headrich"
+   ],
+   "seconds": 6.6
+  }
+ ],
+ "recorded": "2026-11-19",
+ "note": "Actions chosen by the model; every result is real output from the Library of Congress and Internet Archive services."
+}

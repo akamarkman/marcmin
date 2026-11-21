@@ -1,0 +1,320 @@
+{
+ "question": "How did people keep food cold before refrigerators?",
+ "model": "claude-haiku-5-5",
+ "cost_usd": 0.0053,
+ "steps": [
+  {
+   "n": 1,
+   "thought": "Start with a catalog keyword search to find books on historical methods of keeping food cold before refrigeration.",
+   "action": "search_catalog",
+   "args": {
+    "query": "food preservation cold storage history before refrigeration"
+   },
+   "observation": "No records.",
+   "raw": [],
+   "seconds": 3.1
+  },
+  {
+   "n": 2,
+   "thought": "The keyword search returned nothing, so I'll try a subject heading search on a common LCSH heading for refrigeration history, which should surface relevant catalog records.",
+   "action": "search_by_subject",
+   "args": {
+    "heading": "Refrigeration--History"
+   },
+   "observation": "[1] Refrigeration in America; a history of a new technology and its impact (1953) · class TP494.U5 A7 · subjects: Refrigeration and refrigerating machinery; Refrigeration and refrigerating machinery--History\n[2] Refrigeration in America; a history of a new technology and its impact (1972) · class TP494.U5 A7 1972 · subjects: Refrigeration and refrigerating machinery--History\n[3] Refrigeration : a history (2015) · class TP492 .G29 2015 · subjects: Refrigeration and refrigerating machinery--History\n[4] A history of refrigeration throughout the world (1979) · class TP492 .T4713 · subjects: Refrigeration and refrigerating machinery--History\n[5] The men who created cold; a history of refrigeration (1967) · class TP494.A1 W6 · subjects: Refrigeration and refrigerating machinery--History\n[6] Frostbite : how refrigeration changed our food, our planet, and ourselves (2024) · class TP492.7 · subjects: Refrigeration and refrigerating machinery--History; Refrigeration and refrigerating machinery--Social aspects--History; Cold storage industry--History; Food supply--Social aspects--History\n[7] Frostbite : how refrigeration changed our food, our planet, and ourselves (2024) · class TP492.7 .T95 2024 · subjects: Refrigeration and refrigerating machinery--History; Refrigeration and refrigerating machinery--Social aspects--History; Cold storage industry--History; Food supply--Social aspects--History\n[8] How the refrigerator changed history (2016) · class TP492.2 .B56 2016 · subjects: Refrigerators--History--Juvenile literature; Inventions--Juvenile literature; Inventions; Refrigerators",
+   "raw": [
+    {
+     "title": "Refrigeration in America; a history of a new technology and its impact",
+     "year": "1953",
+     "class": "TP494.U5 A7",
+     "lccn": "52013148",
+     "subjects": [
+      "Refrigeration and refrigerating machinery",
+      "Refrigeration and refrigerating machinery--History"
+     ]
+    },
+    {
+     "title": "Refrigeration in America; a history of a new technology and its impact",
+     "year": "1972",
+     "class": "TP494.U5 A7 1972",
+     "lccn": "74159079",
+     "subjects": [
+      "Refrigeration and refrigerating machinery--History"
+     ]
+    },
+    {
+     "title": "Refrigeration : a history",
+     "year": "2015",
+     "class": "TP492 .G29 2015",
+     "lccn": "2015023132",
+     "subjects": [
+      "Refrigeration and refrigerating machinery--History"
+     ]
+    },
+    {
+     "title": "A history of refrigeration throughout the world",
+     "year": "1979",
+     "class": "TP492 .T4713",
+     "lccn": "80479261",
+     "subjects": [
+      "Refrigeration and refrigerating machinery--History"
+     ]
+    },
+    {
+     "title": "The men who created cold; a history of refrigeration",
+     "year": "1967",
+     "class": "TP494.A1 W6",
+     "lccn": "67005013",
+     "subjects": [
+      "Refrigeration and refrigerating machinery--History"
+     ]
+    },
+    {
+     "title": "Frostbite : how refrigeration changed our food, our planet, and ourselves",
+     "year": "2024",
+     "class": "TP492.7",
+     "lccn": "2023048095",
+     "subjects": [
+      "Refrigeration and refrigerating machinery--History",
+      "Refrigeration and refrigerating machinery--Social aspects--History",
+      "Cold storage industry--History",
+      "Food supply--Social aspects--History"
+     ]
+    },
+    {
+     "title": "Frostbite : how refrigeration changed our food, our planet, and ourselves",
+     "year": "2024",
+     "class": "TP492.7 .T95 2024",
+     "lccn": "2023048094",
+     "subjects": [
+      "Refrigeration and refrigerating machinery--History",
+      "Refrigeration and refrigerating machinery--Social aspects--History",
+      "Cold storage industry--History",
+      "Food supply--Social aspects--History"
+     ]
+    },
+    {
+     "title": "How the refrigerator changed history",
+     "year": "2016",
+     "class": "TP492.2 .B56 2016",
+     "lccn": "2015930955",
+     "subjects": [
+      "Refrigerators--History--Juvenile literature",
+      "Inventions--Juvenile literature",
+      "Inventions",
+      "Refrigerators"
+     ]
+    }
+   ],
+   "seconds": 3.1
+  },
+  {
+   "n": 3,
+   "thought": "The subject results are all modern histories of mechanical refrigeration, so I'll browse the LCSH neighborhood of 'Cold storage' to find older headings for ice houses, ice harvesting, and cellar cooling.",
+   "action": "browse_heading",
+   "args": {
+    "heading": "Cold storage"
+   },
+   "observation": "Heading: Cold storage\nBroader: Food--Preservation; Refrigerators\nNarrower: none\nRelated: none\nOther matching headings: Cold storage--Congresses; Cold storage--Health aspects; Cold storage industry",
+   "raw": {
+    "heading": "Cold storage",
+    "uri": "http://id.loc.gov/authorities/subjects/sh85027926",
+    "broader": [
+     "Food--Preservation",
+     "Refrigerators"
+    ],
+    "narrower": [],
+    "related": [],
+    "other_matches": [
+     "Cold storage--Congresses",
+     "Cold storage--Health aspects",
+     "Cold storage industry"
+    ],
+    "note": ""
+   },
+   "seconds": 3.8
+  },
+  {
+   "n": 4,
+   "thought": "The catalog only returns modern mechanical-refrigeration histories, so I'll search public-domain texts pre-1929 on pre-refrigeration cooling methods like ice houses and cellar storage.",
+   "action": "find_free_text",
+   "args": {
+    "query": "subject:(ice houses OR ice storage OR cold storage) AND subject:(food preservation OR cooling)"
+   },
+   "observation": "[AirCooledAppleStorageHouses] Air Cooled Apple Storage Houses (1914)\n[oacreviewvol37iss02] O. A. C. Review Volume 37 Issue 2, October 1924 (1924)",
+   "raw": [
+    {
+     "creator": "W. N. Hutt",
+     "date": "1914-08-01T00:00:00Z",
+     "identifier": "AirCooledAppleStorageHouses",
+     "title": "Air Cooled Apple Storage Houses"
+    },
+    {
+     "creator": "Ontario Agricultural College",
+     "date": "1924-10-01T00:00:00Z",
+     "identifier": "oacreviewvol37iss02",
+     "title": "O. A. C. Review Volume 37 Issue 2, October 1924"
+    }
+   ],
+   "seconds": 2.8
+  },
+  {
+   "n": 5,
+   "thought": "The 1914 public-domain bulletin on air-cooled apple storage houses is the closest pre-refrigeration cooling source found so far, so I'll read its passages on how cold was maintained without mechanical refrigeration.",
+   "action": "read_text",
+   "args": {
+    "identifier": "AirCooledAppleStorageHouses",
+    "question": "How were storage houses cooled without mechanical refrigeration, such as by ventilation, night air, ice, or insulation, and what temperatures were maintained?"
+   },
+   "observation": "Air Cooled Apple Storage Houses\n(page 3 of the scan) al times in the last few years my attention has been called to remarkably fine fruit being put on the market late in the season by mountain farmers. These apples had been kept in various kinds of cel- lars and caves, and were almost as sound and firm as the fruit coining from cold storage. One old man used to come over from the Blue Ridge Mountains bringing with him, on the same load, apples of this and of last season's crop. This led me to investigate the subject of cellar or common storage, with the idea of designing a cheap apple-storage house that would enable our mountain growers to hold over their good fruit until it could find a profitable market. In the meantime some of our most progressive growers had already constructed different forms of air- cooled storage houses and had used them for one or two seasons. Ob- servations were made on these houses, and the two first constructed \n\n(page 2 of the scan) If the ideal storage were available it would certainly be one or other of the methods of mechanical refrigeration which modern engineering skill has of late brought to such a high degree of perfection. Owing, however, to the high cost of construction and installation of such plants, and the fact that to pay they must be operated the year round, they are practically beyond the reach of the average farmer and fruit grower. Even ice-cooled storage houses are usually impracticable except where handled by cooperative organizations or fruit exchanges.",
+   "raw": {
+    "identifier": "AirCooledAppleStorageHouses",
+    "title": "Air Cooled Apple Storage Houses",
+    "url": "https://archive.org/details/AirCooledAppleStorageHouses",
+    "passages": [
+     {
+      "page": 3,
+      "text": "al times in the last few years my attention has been called to remarkably fine fruit being put on the market late in the season by mountain farmers. These apples had been kept in various kinds of cel- lars and caves, and were almost as sound and firm as the fruit coining from cold storage. One old man used to come over from the Blue Ridge Mountains bringing with him, on the same load, apples of this and of last season's crop. This led me to investigate the subject of cellar or common storage, with the idea of designing a cheap apple-storage house that would enable our mountain growers to hold over their good fruit until it could find a profitable market. In the meantime some of our most progressive growers had already constructed different forms of air- cooled storage houses and had used them for one or two seasons. Ob- servations were made on these houses, and the two first constructed "
+     },
+     {
+      "page": 2,
+      "text": "If the ideal storage were available it would certainly be one or other of the methods of mechanical refrigeration which modern engineering skill has of late brought to such a high degree of perfection. Owing, however, to the high cost of construction and installation of such plants, and the fact that to pay they must be operated the year round, they are practically beyond the reach of the average farmer and fruit grower. Even ice-cooled storage houses are usually impracticable except where handled by cooperative organizations or fruit exchanges."
+     }
+    ]
+   },
+   "seconds": 9.4
+  },
+  {
+   "n": 6,
+   "thought": "The 1914 bulletin covers orchard storage but not household cooling, so I'll search pre-1929 public-domain texts on home methods like iceboxes, springhouses, and cellars.",
+   "action": "find_free_text",
+   "args": {
+    "query": "subject:(ice box OR springhouse OR cellar storage OR ice harvesting) AND subject:(cookery OR household OR food)"
+   },
+   "observation": "No public-domain texts found.",
+   "raw": [],
+   "seconds": 4.9
+  },
+  {
+   "n": 7,
+   "thought": "The earlier free-text queries were too narrow, so I'll look up the LCSH heading for food preservation history, which may surface older catalog records on household cooling methods.",
+   "action": "search_by_subject",
+   "args": {
+    "heading": "Food--Preservation--History"
+   },
+   "observation": "[1] The history of food preservation (1986) · class TP371.2 .T46 1986 · subjects: Food--Preservation--History\n[2] Waste not, want not : food preservation from early times to the present day (1991) · class TX601 .W29 1991 · subjects: Food--Preservation--History; Food--Preservation--Social aspects--Great Britain--History\n[3] Pickled, potted, and canned : how the art and science of food preserving changed the world (2006) · class n/a · subjects: Canning and preserving--History; Food--Preservation--History\n[4] Pickled, potted, and canned the story of food preserving (2000) · class TX601 .S473 2000 · subjects: Canning and preserving--History; Food--Preservation--History\n[5] Pickled, potted, and canned : how the art and science of food preserving changed the world (2000) · class TX601 .S47 2001 · subjects: Canning and preserving--History; Food--Preservation--History\n[6] Mūne : la conservation alimentaire traditionnelle au Liban (1994) · class TX601 .K285 1994 · subjects: Food--Preservation--Lebanon--History; Food--Storage--Lebanon--History; Food--Preservation--Social aspects--Lebanon--History\n[7] To feed a nation : a history of Australian food science and technology (2005) · class TX353 .F37 2005 · subjects: Food--History; Aboriginal Australians--Food; Food--Preservation--History; Food--Research--Australia\n[8] Van pekelvat to diepvrieskist : interviews en beschouwingen over de huishoudelijke conservering op het Nederlandse platteland in de eerste helft van de twintigste eeuw (1989) · class TX601 .J6 1989 · subjects: Food--Preservation--History; Food--Social aspects--Netherlands--History",
+   "raw": [
+    {
+     "title": "The history of food preservation",
+     "year": "1986",
+     "class": "TP371.2 .T46 1986",
+     "lccn": "86010867",
+     "subjects": [
+      "Food--Preservation--History"
+     ]
+    },
+    {
+     "title": "Waste not, want not : food preservation from early times to the present day",
+     "year": "1991",
+     "class": "TX601 .W29 1991",
+     "lccn": "92212915",
+     "subjects": [
+      "Food--Preservation--History",
+      "Food--Preservation--Social aspects--Great Britain--History"
+     ]
+    },
+    {
+     "title": "Pickled, potted, and canned : how the art and science of food preserving changed the world",
+     "year": "2006",
+     "class": "",
+     "lccn": "2006287095",
+     "subjects": [
+      "Canning and preserving--History",
+      "Food--Preservation--History"
+     ]
+    },
+    {
+     "title": "Pickled, potted, and canned the story of food preserving",
+     "year": "2000",
+     "class": "TX601 .S473 2000",
+     "lccn": "2001320290",
+     "subjects": [
+      "Canning and preserving--History",
+      "Food--Preservation--History"
+     ]
+    },
+    {
+     "title": "Pickled, potted, and canned : how the art and science of food preserving changed the world",
+     "year": "2000",
+     "class": "TX601 .S47 2001",
+     "lccn": "2001032065",
+     "subjects": [
+      "Canning and preserving--History",
+      "Food--Preservation--History"
+     ]
+    },
+    {
+     "title": "Mūne : la conservation alimentaire traditionnelle au Liban",
+     "year": "1994",
+     "class": "TX601 .K285 1994",
+     "lccn": "94188022",
+     "subjects": [
+      "Food--Preservation--Lebanon--History",
+      "Food--Storage--Lebanon--History",
+      "Food--Preservation--Social aspects--Lebanon--History"
+     ]
+    },
+    {
+     "title": "To feed a nation : a history of Australian food science and technology",
+     "year": "2005",
+     "class": "TX353 .F37 2005",
+     "lccn": "2005440645",
+     "subjects": [
+      "Food--History",
+      "Aboriginal Australians--Food",
+      "Food--Preservation--History",
+      "Food--Research--Australia"
+     ]
+    },
+    {
+     "title": "Van pekelvat to diepvrieskist : interviews en beschouwingen over de huishoudelijke conservering op het Nederlandse platteland in de eerste helft van de twintigste eeuw",
+     "year": "1989",
+     "class": "TX601 .J6 1989",
+     "lccn": "90220074",
+     "subjects": [
+      "Food--Preservation--History",
+      "Food--Social aspects--Netherlands--History"
+     ]
+    }
+   ],
+   "seconds": 3.6
+  },
+  {
+   "n": 8,
+   "thought": "Earlier free-text queries were too narrow and the household-cooling sources are still missing, so I'll try one simpler pre-1929 search on iceboxes in cookery and household texts.",
+   "action": "find_free_text",
+   "args": {
+    "query": "subject:(cookery OR household management) AND (\"ice box\" OR icebox)"
+   },
+   "observation": "No public-domain texts found.",
+   "raw": [],
+   "seconds": 5.7
+  },
+  {
+   "n": 9,
+   "thought": "Catalog and public-domain searches turned up only one usable pre-1929 source, so I'm finishing with a short, candid answer built on it.",
+   "action": "answer",
+   "answer": "The catalog returned only modern histories of mechanical refrigeration, and my searches found no pre-1929 public-domain texts on household iceboxes, springhouses, or cellars, so this answer is thin. The one period source I read, the 1914 bulletin Air Cooled Apple Storage Houses, says mountain growers kept apples in various kinds of cellars and caves that stayed almost as sound as cold-storage fruit (Air Cooled Apple Storage Houses, scan p. 3). The same bulletin says mechanical refrigeration was beyond the average farmer and that ice-cooled storage houses were usually impracticable except through cooperatives (Air Cooled Apple Storage Houses, scan p. 2), so cellars and air-cooled buildings were the realistic options for many. That source concerns orchard fruit in 1914, not kitchens, and its methods are dated. For the broader story, start with Frostbite (2024) and Refrigeration in America (1953), which cover what came before and after mechanical cooling.",
+   "records": [
+    "Frostbite : how refrigeration changed our food, our planet, and ourselves (2024)",
+    "Refrigeration in America; a history of a new technology and its impact (1953)",
+    "Refrigeration : a history (2015)",
+    "Pickled, potted, and canned : how the art and science of food preserving changed the world (2000)",
+    "The men who created cold; a history of refrigeration (1967)"
+   ],
+   "seconds": 7.6
+  }
+ ],
+ "recorded": "2026-11-19",
+ "note": "Actions chosen by the model; every result is real output from the Library of Congress and Internet Archive services."
+}

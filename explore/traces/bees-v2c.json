@@ -1,0 +1,343 @@
+{
+ "question": "How do honeybees choose a place to start a new hive?",
+ "model": "claude-haiku-5-5",
+ "cost_usd": 0.0052,
+ "steps": [
+  {
+   "n": 1,
+   "thought": "Start with a catalog keyword search on honeybee nest site selection to find records on how swarms choose new hive locations.",
+   "action": "search_catalog",
+   "args": {
+    "query": "honeybee nest site selection swarm"
+   },
+   "observation": "No records.",
+   "raw": [],
+   "seconds": 3.1
+  },
+  {
+   "n": 2,
+   "thought": "The keyword search returned nothing, so I'll try the subject heading for honeybee swarming behavior, which is the likely LCSH form for this topic.",
+   "action": "search_by_subject",
+   "args": {
+    "heading": "Honeybees--Swarming"
+   },
+   "observation": "[1] Queenspotting : meet the remarkable queen bee and discover the drama at the heart of the hive : includes 48 queenspotting challenges (2019) · class QL568.A6 · subjects: Queen honeybees--Behavior; Bees--Swarming\n[2] Queenspotting : meet the remarkable queen bee and discover the drama at the heart of the hive ; includes 48 queenspotting challenges (2019) · class QL568.A6 K378 2019 · subjects: Queen honeybees--Behavior; Bees--Swarming",
+   "raw": [
+    {
+     "title": "Queenspotting : meet the remarkable queen bee and discover the drama at the heart of the hive : includes 48 queenspotting challenges",
+     "year": "2019",
+     "class": "QL568.A6",
+     "lccn": "2019001347",
+     "subjects": [
+      "Queen honeybees--Behavior",
+      "Bees--Swarming"
+     ]
+    },
+    {
+     "title": "Queenspotting : meet the remarkable queen bee and discover the drama at the heart of the hive ; includes 48 queenspotting challenges",
+     "year": "2019",
+     "class": "QL568.A6 K378 2019",
+     "lccn": "2018061227",
+     "subjects": [
+      "Queen honeybees--Behavior",
+      "Bees--Swarming"
+     ]
+    }
+   ],
+   "seconds": 3.9
+  },
+  {
+   "n": 3,
+   "thought": "The Swarming heading returned only a queen-behavior book that doesn't cover site choice, so I'll check neighboring headings for a better fit, such as nest-site or nesting-behavior subdivisions.",
+   "action": "sibling_headings",
+   "args": {
+    "heading": "Honeybees--Swarming"
+   },
+   "observation": "'Honeybees' is not an authorized heading; the authorized form is 'Honeybee'.\nSubdivisions of 'Honeybee': Honeybee--Artificial insemination; Honeybee--Behavior; Honeybee--Breeding; Honeybee--Diseases; Honeybee--Juvenile literature; Honeybee--Larvae; Honeybee--Parasites; Honeybee--Religious aspects\nBeside it in the heading tree (other narrower terms of Apis (Insects), Bees): Apis cerana; Pollination by bees; Photography of bees; Classification--Books--Bees; Libraries--Special collections--Bees; Andrenidae; Anthophoridae; Apidae; Carpenter bees; Colletidae; Halictidae; Megachilidae\nHeadings most often assigned with 'Honeybee' in 25 catalog records: Honeybee--Behavior (11); Honeybee--Diseases (8); Honeybee (6); Honeybee--Breeding (3); Honeybee--Anatomy (3); Honeybee--Physiology (2); Honeybee--Nervous system (2); Honeybee--Dissection (2); Honeybee--Predators of (2); Honeybee--Ecology (1)",
+   "raw": {
+    "heading": "Honeybees--Swarming",
+    "authorized": "Honeybee",
+    "subdivisions": [
+     "Honeybee--Artificial insemination",
+     "Honeybee--Behavior",
+     "Honeybee--Breeding",
+     "Honeybee--Diseases",
+     "Honeybee--Juvenile literature",
+     "Honeybee--Larvae",
+     "Honeybee--Parasites",
+     "Honeybee--Religious aspects"
+    ],
+    "tree_siblings": [
+     "Apis cerana",
+     "Pollination by bees",
+     "Photography of bees",
+     "Classification--Books--Bees",
+     "Libraries--Special collections--Bees",
+     "Andrenidae",
+     "Anthophoridae",
+     "Apidae",
+     "Carpenter bees",
+     "Colletidae",
+     "Halictidae",
+     "Megachilidae"
+    ],
+    "co_assigned": [
+     [
+      "Honeybee--Behavior",
+      11
+     ],
+     [
+      "Honeybee--Diseases",
+      8
+     ],
+     [
+      "Honeybee",
+      6
+     ],
+     [
+      "Honeybee--Breeding",
+      3
+     ],
+     [
+      "Honeybee--Anatomy",
+      3
+     ],
+     [
+      "Honeybee--Physiology",
+      2
+     ],
+     [
+      "Honeybee--Nervous system",
+      2
+     ],
+     [
+      "Honeybee--Dissection",
+      2
+     ],
+     [
+      "Honeybee--Predators of",
+      2
+     ],
+     [
+      "Honeybee--Ecology",
+      1
+     ]
+    ]
+   },
+   "seconds": 7.5
+  },
+  {
+   "n": 4,
+   "thought": "The Swarming heading only turned up a queen-behavior book, but Honeybee--Behavior is the most frequently assigned subdivision and should include swarm and nest-site material, so I'll search that heading.",
+   "action": "search_by_subject",
+   "args": {
+    "heading": "Honeybee--Behavior"
+   },
+   "observation": "[1] The song of increase : returning to our sacred partnership with honeybees (2014) · class QL568.A6 F565 2014 · subjects: Honeybee--Behavior\n[2] The world of the honeybee (1974) · class QL568.A6 B84 1974 · subjects: Honeybee; Honeybee--Behavior\n[3] The world of the honeybee. With 2 colour photos. and 87 black and white photos. taken by the author (1954) · class QL568.A6 B84 1954 · subjects: Honeybee; Honeybee--Behavior\n[4] The honey bee : understanding the ultimate engineer (2020) · class QL568.A6 C73 2020 · subjects: Honeybee; Honeybee--Behavior; Honeybee--Ecology\n[5] The wisdom of the hive : the social physiology of honey bee colonies (1995) · class QL568.A6 S445 1995 · subjects: Honeybee--Food; Honeybee--Behavior\n[6] The reproductive behaviour of European honeybee colonies : a lecture given to the Central Association of Bee-keepers on 14th March 1974 (1974) · class SF531.5 .S55 · subjects: Honeybee--Breeding; Honeybee--Behavior\n[7] Honeybees : foraging behavior, reproductive biology and diseases (2014) · class QL568.A6 H5625 2014 · subjects: Honeybee--Behavior; Honeybee--Diseases\n[8] Honeybees : foraging behavior, reproductive biology and diseases (2014) · class QL568.A6 · subjects: Honeybee--Behavior; Honeybee--Diseases",
+   "raw": [
+    {
+     "title": "The song of increase : returning to our sacred partnership with honeybees",
+     "year": "2014",
+     "class": "QL568.A6 F565 2014",
+     "lccn": "2014921269",
+     "subjects": [
+      "Honeybee--Behavior"
+     ]
+    },
+    {
+     "title": "The world of the honeybee",
+     "year": "1974",
+     "class": "QL568.A6 B84 1974",
+     "lccn": "75309307",
+     "subjects": [
+      "Honeybee",
+      "Honeybee--Behavior"
+     ]
+    },
+    {
+     "title": "The world of the honeybee. With 2 colour photos. and 87 black and white photos. taken by the author",
+     "year": "1954",
+     "class": "QL568.A6 B84 1954",
+     "lccn": "54012293",
+     "subjects": [
+      "Honeybee",
+      "Honeybee--Behavior"
+     ]
+    },
+    {
+     "title": "The honey bee : understanding the ultimate engineer",
+     "year": "2020",
+     "class": "QL568.A6 C73 2020",
+     "lccn": "2019452769",
+     "subjects": [
+      "Honeybee",
+      "Honeybee--Behavior",
+      "Honeybee--Ecology"
+     ]
+    },
+    {
+     "title": "The wisdom of the hive : the social physiology of honey bee colonies",
+     "year": "1995",
+     "class": "QL568.A6 S445 1995",
+     "lccn": "95003645",
+     "subjects": [
+      "Honeybee--Food",
+      "Honeybee--Behavior"
+     ]
+    },
+    {
+     "title": "The reproductive behaviour of European honeybee colonies : a lecture given to the Central Association of Bee-keepers on 14th March 1974",
+     "year": "1974",
+     "class": "SF531.5 .S55",
+     "lccn": "75318537",
+     "subjects": [
+      "Honeybee--Breeding",
+      "Honeybee--Behavior"
+     ]
+    },
+    {
+     "title": "Honeybees : foraging behavior, reproductive biology and diseases",
+     "year": "2014",
+     "class": "QL568.A6 H5625 2014",
+     "lccn": "2013045185",
+     "subjects": [
+      "Honeybee--Behavior",
+      "Honeybee--Diseases"
+     ]
+    },
+    {
+     "title": "Honeybees : foraging behavior, reproductive biology and diseases",
+     "year": "2014",
+     "class": "QL568.A6",
+     "lccn": "2020688455",
+     "subjects": [
+      "Honeybee--Behavior",
+      "Honeybee--Diseases"
+     ]
+    }
+   ],
+   "seconds": 3.3
+  },
+  {
+   "n": 5,
+   "thought": "The catalog records so far are about queen behavior, general biology, and foraging, not how swarms pick a nest site, so I'll search public-domain books on swarm and nest-site choice, which are more likely to cover the older beekeeping literature.",
+   "action": "find_free_text",
+   "args": {
+    "query": "subject:(honeybee swarm) AND (nest OR \"home\" OR \"cavity\")"
+   },
+   "observation": "No public-domain texts found.",
+   "raw": [],
+   "seconds": 4.6
+  },
+  {
+   "n": 6,
+   "thought": "The compound free-text query returned nothing, so I'll retry with a simpler public-domain search on bee swarming, since older beekeeping books are the most likely to describe how swarms choose a nest site.",
+   "action": "find_free_text",
+   "args": {
+    "query": "subject:(bees swarming) OR subject:(swarms of bees)"
+   },
+   "observation": "[cu31924003692435] The relation of phototropism to swarming in the honey-bee, Apis mellifera L. (1920)\n[beekeepersmanua00taylgoog] The Bee-keeper's Manual: Or, Practical Hints on the Management and Complete Preservation of the ... (1860)\n[adescriptionbar00munngoog] A description of the bar-and-frame hive, invented by W. Augustus Munn, with an abstract of ... (1851)\n[cu31924062872969] Swarm control (1921)\n[beekeepersmanua01taylgoog] The bee-keeper's manual; or, Practical hints on the management of the honey-bee (1855)",
+   "raw": [
+    {
+     "creator": "Minnich, Dwight Elmer, 1890-",
+     "date": "1920-01-01T00:00:00Z",
+     "identifier": "cu31924003692435",
+     "title": "The relation of phototropism to swarming in the honey-bee, Apis mellifera L."
+    },
+    {
+     "creator": "Henry Taylor",
+     "date": "1860-01-01T00:00:00Z",
+     "identifier": "beekeepersmanua00taylgoog",
+     "title": "The Bee-keeper's Manual: Or, Practical Hints on the Management and Complete Preservation of the ..."
+    },
+    {
+     "creator": "William Augustus Munn",
+     "date": "1851-01-01T00:00:00Z",
+     "identifier": "adescriptionbar00munngoog",
+     "title": "A description of the bar-and-frame hive, invented by W. Augustus Munn, with an abstract of ..."
+    },
+    {
+     "creator": "Demuth, Geo. S. (George S.)",
+     "date": "1921-01-01T00:00:00Z",
+     "identifier": "cu31924062872969",
+     "title": "Swarm control"
+    },
+    {
+     "creator": "Henry Taylor",
+     "date": "1855-01-01T00:00:00Z",
+     "identifier": "beekeepersmanua01taylgoog",
+     "title": "The bee-keeper's manual; or, Practical hints on the management of the honey-bee"
+    }
+   ],
+   "seconds": 3.4
+  },
+  {
+   "n": 7,
+   "thought": "Step 6 surfaced a 1920 study on swarming in Apis mellifera and older beekeeping manuals; I'll read the most relevant one for how swarms choose a nest site.",
+   "action": "read_text",
+   "args": {
+    "identifier": "beekeepersmanua00taylgoog",
+    "question": "How do swarms choose a new home or nest site? Where do bees prefer to settle when they leave the hive?"
+   },
+   "observation": "The Bee-keeper's Manual: Or, Practical Hints on the Management and Complete Preservation of the ...\n(page 69 of the scan) have detailed the modes in practice for uniting bees^ and for obtaining possession of their honey, by the aid of fumigation. Many proprietors, however, prefer to arrive at the same object by resorting to what is termed Driving; by which process the inmates of one hive are impelled to abandon it, and enter some other. When skilfully performed, this operation is often successful in attaining the end in view; but it is seldom well to attempt it, except in a pretty full hive. Mr. Golding has given, in a small compass, general directions as to the mode of procedure in common cases of Driving, and we will, therefore, adopt his words. \" Towards dusk, when the family will be all at home, let the hive be raised gently from its floor- board, and supported on wedges about half an inch thick. When the bees shall have quietly ascended from the floor up into the hive, it may be inverted steadily on a \n\n(page 91 of the scan) daily with a hot snn^ or the bees would soon again take wing^ perhaps for a long flighty and 1)e hopelessly lost. A somewhat larger hire may be selected for a full-siaed early swaarm than for a later one. In case a swarm returns to the patent hive^ which sometimes happens^ let the latter be watched, for it will soon re-issne, and perhaps on the same day. Occasionally a swarm will divide and settle in two parts, which, if near together, can be shaken into one hive. Otherwise a junction may be made at night, in the way pointed out at page 193. An observance of the advice of Gelieu, and others, is to be recmn- mended, not to allow the swarm to remain where it had been hived tiU the evening, as is custom- ary, but to place it at once, as soon as settled, or within a quarter of an hour, on the B]K)t (if at hand) it is destined to occupy. In sultry weather raise the hive a little to admit air,",
+   "raw": {
+    "identifier": "beekeepersmanua00taylgoog",
+    "title": "The Bee-keeper's Manual: Or, Practical Hints on the Management and Complete Preservation of the ...",
+    "url": "https://archive.org/details/beekeepersmanua00taylgoog",
+    "passages": [
+     {
+      "page": 69,
+      "text": "have detailed the modes in practice for uniting bees^ and for obtaining possession of their honey, by the aid of fumigation. Many proprietors, however, prefer to arrive at the same object by resorting to what is termed Driving; by which process the inmates of one hive are impelled to abandon it, and enter some other. When skilfully performed, this operation is often successful in attaining the end in view; but it is seldom well to attempt it, except in a pretty full hive. Mr. Golding has given, in a small compass, general directions as to the mode of procedure in common cases of Driving, and we will, therefore, adopt his words. \" Towards dusk, when the family will be all at home, let the hive be raised gently from its floor- board, and supported on wedges about half an inch thick. When the bees shall have quietly ascended from the floor up into the hive, it may be inverted steadily on a "
+     },
+     {
+      "page": 91,
+      "text": "daily with a hot snn^ or the bees would soon again take wing^ perhaps for a long flighty and 1)e hopelessly lost. A somewhat larger hire may be selected for a full-siaed early swaarm than for a later one. In case a swarm returns to the patent hive^ which sometimes happens^ let the latter be watched, for it will soon re-issne, and perhaps on the same day. Occasionally a swarm will divide and settle in two parts, which, if near together, can be shaken into one hive. Otherwise a junction may be made at night, in the way pointed out at page 193. An observance of the advice of Gelieu, and others, is to be recmn- mended, not to allow the swarm to remain where it had been hived tiU the evening, as is custom- ary, but to place it at once, as soon as settled, or within a quarter of an hour, on the B]K)t (if at hand) it is destined to occupy. In sultry weather raise the hive a little to admit air,"
+     }
+    ]
+   },
+   "seconds": 6.2
+  },
+  {
+   "n": 8,
+   "thought": "The 1860 manual only covers hiving and driving, not how swarms pick a site, so the 1920 study on phototropism and swarming in Apis mellifera is the best remaining candidate for light and cavity preferences.",
+   "action": "read_text",
+   "args": {
+    "identifier": "cu31924003692435",
+    "question": "How do swarming honeybees choose where to settle or establish a new nest? Do they prefer dark cavities, light conditions, or particular locations?"
+   },
+   "observation": "The relation of phototropism to swarming in the honey-bee, Apis mellifera L.\n(page 2 of the scan) The strong positive phototropism of individual bees is also characteristic of certain activities of the hive asa whole. Kellogg (03) was the first to call attention to the fact that swarming bees are strongly positive to light. He says (p. 694), ‘That the issuance from the hive at swarming time depends upon a sudden extra development of positive heliotropism seems obvious. The ecstasy comes and the bees crowd for the one spot of light in the normal hive, namely, the entrance opening. But when the covering jacket? is lifted and the light comes strongly in from above—my hive was under a skylight—they rush toward the top, that is toward the light. Jacket on and light shut off from above, down they rush; jacket off and light stronger from above than below and they respond like iron filings in front of an electro-magnet which has its current suddenly turned on.” These observations leave no do\n\n(page 3 of the scan) We may agree with Kellogg, therefore, that the issuance of bees from the hive at swarming may be a simple exhibition of positive phototropism, but it is not the result of a sudden increase in phototropism. The sudden increase is in the activity of the animals. Consequently, the fundamental factors in swarm behavior are those which effect a condition of heightened ac- tivity, a condition in which locomotion is generally controlled by light. In my own observations the state of heightened activity doubtless arose from the conditions of temperature and the pre- vention of the bees from making their accustomed flights for defecation, etc. The factors which activate the swarm are not known. They may consist of particular swarm instincts, as von Buttel-Reepen (’15) has suggested, or they may even be more simple reflexes of as yet unknown nature. In any case, the eviderice seems clear that, alth",
+   "raw": {
+    "identifier": "cu31924003692435",
+    "title": "The relation of phototropism to swarming in the honey-bee, Apis mellifera L.",
+    "url": "https://archive.org/details/cu31924003692435",
+    "passages": [
+     {
+      "page": 2,
+      "text": "The strong positive phototropism of individual bees is also characteristic of certain activities of the hive asa whole. Kellogg (03) was the first to call attention to the fact that swarming bees are strongly positive to light. He says (p. 694), ‘That the issuance from the hive at swarming time depends upon a sudden extra development of positive heliotropism seems obvious. The ecstasy comes and the bees crowd for the one spot of light in the normal hive, namely, the entrance opening. But when the covering jacket? is lifted and the light comes strongly in from above—my hive was under a skylight—they rush toward the top, that is toward the light. Jacket on and light shut off from above, down they rush; jacket off and light stronger from above than below and they respond like iron filings in front of an electro-magnet which has its current suddenly turned on.” These observations leave no do"
+     },
+     {
+      "page": 3,
+      "text": "We may agree with Kellogg, therefore, that the issuance of bees from the hive at swarming may be a simple exhibition of positive phototropism, but it is not the result of a sudden increase in phototropism. The sudden increase is in the activity of the animals. Consequently, the fundamental factors in swarm behavior are those which effect a condition of heightened ac- tivity, a condition in which locomotion is generally controlled by light. In my own observations the state of heightened activity doubtless arose from the conditions of temperature and the pre- vention of the bees from making their accustomed flights for defecation, etc. The factors which activate the swarm are not known. They may consist of particular swarm instincts, as von Buttel-Reepen (’15) has suggested, or they may even be more simple reflexes of as yet unknown nature. In any case, the eviderice seems clear that, alth"
+     }
+    ]
+   },
+   "seconds": 7.5
+  },
+  {
+   "n": 9,
+   "thought": "This is the final step, so I'll answer with what the retrieved passages support and state the limits of the evidence.",
+   "action": "answer",
+   "answer": "The sources I could reach don't directly answer how honeybees choose a new nest site. The catalog search for nest-site selection returned nothing, and the honeybee records I found cover queen behavior, foraging, and general biology. The most relevant public-domain passages concern swarming in general. A 1920 study of phototropism in swarming honeybees argues that swarming reflects a sudden rise in activity, possibly driven by temperature and suppressed flights, and that light-seeking governs the bees' movement, though the factors that trigger a swarm \"are not known\" (Relation of Phototropism to Swarming in the Honey-Bee, p. 3). The 1860 Bee-keeper's Manual discusses hiving a swarm promptly on the chosen hive and watching a swarm that returns to its old hive (The Bee-keeper's Manual, p. 91), but it doesn't explain how bees pick a site. These are old sources, and the scientific understanding of swarm site selection has changed since, so the catalog's modern honeybee books are a better starting point for current findings.",
+   "records": [
+    "The honey bee : understanding the ultimate engineer (2020)",
+    "Honeybees : foraging behavior, reproductive biology and diseases (2014)",
+    "The wisdom of the hive : the social physiology of honey bee colonies (1995)",
+    "The world of the honeybee (1974)",
+    "Queenspotting : meet the remarkable queen bee and discover the drama at the heart of the hive (2019)"
+   ],
+   "seconds": 3.7
+  }
+ ],
+ "recorded": "2026-11-19",
+ "note": "Actions chosen by the model; every result is real output from the Library of Congress and Internet Archive services."
+}

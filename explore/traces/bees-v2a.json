@@ -1,0 +1,248 @@
+{
+ "question": "How do honeybees choose a place to start a new hive?",
+ "model": "claude-haiku-5-5",
+ "cost_usd": 0.0034,
+ "steps": [
+  {
+   "n": 1,
+   "thought": "Start with a catalog keyword search on honeybee nest-site selection to find good hits whose subject headings I can then browse.",
+   "action": "search_catalog",
+   "args": {
+    "query": "honeybee nest site selection swarming"
+   },
+   "observation": "No records.",
+   "raw": [],
+   "seconds": 2.7
+  },
+  {
+   "n": 2,
+   "thought": "The keyword search returned nothing, so I'll try a broader subject-heading search on the main topic, honeybees' nesting behavior, which should surface records I can browse.",
+   "action": "search_by_subject",
+   "args": {
+    "heading": "Honeybees--Nests"
+   },
+   "observation": "[1] Honeybee nests : composition, structure, function (2014) · class QL568.A6 H394 2014 · subjects: Honeybee--Nests; Beeswax; Honeycombs; Bioenergetics; Honeybee--Behavior",
+   "raw": [
+    {
+     "title": "Honeybee nests : composition, structure, function",
+     "year": "2014",
+     "class": "QL568.A6 H394 2014",
+     "lccn": "2014931509",
+     "subjects": [
+      "Honeybee--Nests",
+      "Beeswax",
+      "Honeycombs",
+      "Bioenergetics",
+      "Honeybee--Behavior"
+     ]
+    }
+   ],
+   "seconds": 4.3
+  },
+  {
+   "n": 3,
+   "thought": "The 2014 record Honeybee nests is a good hit, so I'll browse the Honeybee--Behavior heading's broader, narrower and related headings to find the nest-site and swarming subjects.",
+   "action": "browse_heading",
+   "args": {
+    "heading": "Honeybee--Behavior"
+   },
+   "observation": "Heading: Honeybee--Behavior\nBroader: none\nNarrower: none\nRelated: none\nOther matching headings: Honeybee--Behavior--Asia; Honeybee--Behavior--Congresses; Honeybee--Behavior--Drama; Honeybee--Behavior--Juvenile literature",
+   "raw": {
+    "heading": "Honeybee--Behavior",
+    "uri": "http://id.loc.gov/authorities/subjects/sh2010000698",
+    "broader": [],
+    "narrower": [],
+    "related": [],
+    "other_matches": [
+     "Honeybee--Behavior--Asia",
+     "Honeybee--Behavior--Congresses",
+     "Honeybee--Behavior--Drama",
+     "Honeybee--Behavior--Juvenile literature"
+    ],
+    "note": ""
+   },
+   "seconds": 4.3
+  },
+  {
+   "n": 4,
+   "thought": "The Honeybee--Behavior heading has no narrower or related headings, so I'll use sibling_headings on the swarming-related neighbor to find the nest-site and colony-founding subjects catalogers assign alongside it.",
+   "action": "sibling_headings",
+   "args": {
+    "heading": "Honeybees--Swarming"
+   },
+   "observation": "'Honeybees' is not an authorized heading; the authorized form is 'Honeybee'.\nSubdivisions of 'Honeybee': Honeybee--Artificial insemination; Honeybee--Behavior; Honeybee--Breeding; Honeybee--Diseases; Honeybee--Juvenile literature; Honeybee--Larvae; Honeybee--Parasites; Honeybee--Religious aspects\nBeside it in the heading tree (other narrower terms of Apis (Insects), Bees): Apis cerana; Pollination by bees; Photography of bees; Classification--Books--Bees; Libraries--Special collections--Bees; Andrenidae; Anthophoridae; Apidae; Carpenter bees; Colletidae; Halictidae; Megachilidae\nHeadings most often assigned with 'Honeybee' in 25 catalog records: Honeybee--Behavior (11); Honeybee--Diseases (8); Honeybee (6); Honeybee--Breeding (3); Honeybee--Anatomy (3); Honeybee--Physiology (2); Honeybee--Nervous system (2); Honeybee--Dissection (2); Honeybee--Predators of (2); Honeybee--Ecology (1)",
+   "raw": {
+    "heading": "Honeybees--Swarming",
+    "authorized": "Honeybee",
+    "subdivisions": [
+     "Honeybee--Artificial insemination",
+     "Honeybee--Behavior",
+     "Honeybee--Breeding",
+     "Honeybee--Diseases",
+     "Honeybee--Juvenile literature",
+     "Honeybee--Larvae",
+     "Honeybee--Parasites",
+     "Honeybee--Religious aspects"
+    ],
+    "tree_siblings": [
+     "Apis cerana",
+     "Pollination by bees",
+     "Photography of bees",
+     "Classification--Books--Bees",
+     "Libraries--Special collections--Bees",
+     "Andrenidae",
+     "Anthophoridae",
+     "Apidae",
+     "Carpenter bees",
+     "Colletidae",
+     "Halictidae",
+     "Megachilidae"
+    ],
+    "co_assigned": [
+     [
+      "Honeybee--Behavior",
+      11
+     ],
+     [
+      "Honeybee--Diseases",
+      8
+     ],
+     [
+      "Honeybee",
+      6
+     ],
+     [
+      "Honeybee--Breeding",
+      3
+     ],
+     [
+      "Honeybee--Anatomy",
+      3
+     ],
+     [
+      "Honeybee--Physiology",
+      2
+     ],
+     [
+      "Honeybee--Nervous system",
+      2
+     ],
+     [
+      "Honeybee--Dissection",
+      2
+     ],
+     [
+      "Honeybee--Predators of",
+      2
+     ],
+     [
+      "Honeybee--Ecology",
+      1
+     ]
+    ]
+   },
+   "seconds": 3.5
+  },
+  {
+   "n": 5,
+   "thought": "The catalog headings don't yet include a nest-site or swarming subject, so I'll search public-domain beekeeping books (pre-1929) for swarm and nest-site selection, which should cover the older literature on this question.",
+   "action": "find_free_text",
+   "args": {
+    "query": "subject:(honeybee OR bees) swarming nest site"
+   },
+   "observation": "No public-domain texts found.",
+   "raw": [],
+   "seconds": 4.4
+  },
+  {
+   "n": 6,
+   "thought": "The catalog hits don't cover nest-site choice, and the earlier free-text query was probably too narrow, so I'll retry with a simpler public-domain search on bee swarming.",
+   "action": "find_free_text",
+   "args": {
+    "query": "subject:(bees) AND swarming"
+   },
+   "observation": "[cihm_82522] Natural swarming of bees and how to prevent it [microform] (1915)\n[beekeeperstextb00kinggoog] The bee-keeper's text-book with alphabetical index, being a complete reference book on all practical (1867)\n[radicalcureforsw01jone] A radical cure for the swarming habit of bees (1910)\n[beekeepersmanua00taylgoog] The Bee-keeper's Manual: Or, Practical Hints on the Management and Complete Preservation of the ... (1860)\n[apiculturedouble00stoc] Apiculture: the double-hive, non-swarming system (1891)",
+   "raw": [
+    {
+     "creator": [
+      "Pettit, Morley",
+      "Ontario. Dept. of Agriculture"
+     ],
+     "date": "1915-01-01T00:00:00Z",
+     "identifier": "cihm_82522",
+     "title": "Natural swarming of bees and how to prevent it [microform]"
+    },
+    {
+     "creator": [
+      "King, N. H",
+      "King, Homer A",
+      "Charles C. Miller Memorial Apicultural Library WU"
+     ],
+     "date": "1867-01-01T00:00:00Z",
+     "identifier": "beekeeperstextb00kinggoog",
+     "title": "The bee-keeper's text-book with alphabetical index, being a complete reference book on all practical subjects connected with the culture of the honey bee in both common and movable-comb hives, giving minute directions for the management of bees in every month of the year, and illustrating the nucleus system of swarming and Italian queen rearing"
+    },
+    {
+     "creator": "Jones, Henry. [from old catalog]",
+     "date": "1910-01-01T00:00:00Z",
+     "identifier": "radicalcureforsw01jone",
+     "title": "A radical cure for the swarming habit of bees"
+    },
+    {
+     "creator": "Henry Taylor",
+     "date": "1860-01-01T00:00:00Z",
+     "identifier": "beekeepersmanua00taylgoog",
+     "title": "The Bee-keeper's Manual: Or, Practical Hints on the Management and Complete Preservation of the ..."
+    },
+    {
+     "creator": "Stockwell, George Appleton, 1847-1912. [from old catalog]",
+     "date": "1891-01-01T00:00:00Z",
+     "identifier": "apiculturedouble00stoc",
+     "title": "Apiculture: the double-hive, non-swarming system"
+    }
+   ],
+   "seconds": 3.4
+  },
+  {
+   "n": 7,
+   "thought": "The swarming search returned pre-1929 beekeeping books; I'll read the most relevant one, the 1915 natural swarming text, for what it says about where swarms settle and how they pick a site.",
+   "action": "read_text",
+   "args": {
+    "identifier": "cihm_82522",
+    "question": "How do swarms choose a place to settle or build a new nest, and what site conditions do they prefer?"
+   },
+   "observation": "Natural swarming of bees and how to prevent it [microform]\n(page 1 of the scan) There is nothing on the farm which requires so little care, in proportion to the returns, as bees. This is why they ave sometimes kept at a loss: because the care they need is comparatively small and is often neglected. ‘They require less attention than some other things; but what they do require they must have. The management of an apiary for honey must be approached in the same business like manner as, for example, the management of a dairy herd for milk. ‘There is no more “luck” or “chance” in the one than in the other. Scientific methods govern both. Failure in either is due to some definite cause which must be dis- covered and mastered before success can be attained.\n\n(page 10 of the scan) For Comb Honey Production the work in the supers has to be so crowded to get well-filled sections that it is practically impossible to keep the bees from con- tracting the swarming impulse. In fact the best work in comb honey supers is usually done by first swarms newly hived on starters. They are full of energy due to the completely changed conditions, they have no brood to care for and having narrow foundation starters instead of full sheets or combs in the brood chamber they throw their working force strongly into the supers.",
+   "raw": {
+    "identifier": "cihm_82522",
+    "title": "Natural swarming of bees and how to prevent it [microform]",
+    "url": "https://archive.org/details/cihm_82522",
+    "passages": [
+     {
+      "page": 1,
+      "text": "There is nothing on the farm which requires so little care, in proportion to the returns, as bees. This is why they ave sometimes kept at a loss: because the care they need is comparatively small and is often neglected. ‘They require less attention than some other things; but what they do require they must have. The management of an apiary for honey must be approached in the same business like manner as, for example, the management of a dairy herd for milk. ‘There is no more “luck” or “chance” in the one than in the other. Scientific methods govern both. Failure in either is due to some definite cause which must be dis- covered and mastered before success can be attained."
+     },
+     {
+      "page": 10,
+      "text": "For Comb Honey Production the work in the supers has to be so crowded to get well-filled sections that it is practically impossible to keep the bees from con- tracting the swarming impulse. In fact the best work in comb honey supers is usually done by first swarms newly hived on starters. They are full of energy due to the completely changed conditions, they have no brood to care for and having narrow foundation starters instead of full sheets or combs in the brood chamber they throw their working force strongly into the supers."
+     }
+    ]
+   },
+   "seconds": 3.4
+  },
+  {
+   "n": 8,
+   "thought": "The catalog and the public-domain search have not yet produced a passage on swarm nest-site choice, and the one book I read covers only management and supers. I'll stop here and report the gap rather than spend my last step on an unlikely hit.",
+   "action": "answer",
+   "answer": "The sources I searched don't directly answer how honeybees choose a new nest site. The catalog has no subject heading for nest-site selection or swarm settling, and the 1915 swarming text I read (Natural swarming of bees and how to prevent it, p. 1 and p. 10) covers general apiary management and how first swarms behave in comb-honey supers, not where swarms settle. Older beekeeping books that might discuss swarm settling include The bee-keeper's text-book (1867) and The Bee-keeper's Manual (1860), but I did not read them. Any pre-1929 account would also predate modern research on scout bees and nest-cavity evaluation, so treat it as historical. For a current answer, a reference librarian could look for recent entertainment of the topic in the catalog under Honeybee--Behavior or Swarming.",
+   "records": [
+    "Honeybee nests : composition, structure, function (2014), QL568.A6 H394 2014",
+    "Natural swarming of bees and how to prevent it [microform] (1915)",
+    "The bee-keeper's text-book with alphabetical index (1867)",
+    "The Bee-keeper's Manual: Or, Practical Hints on the Management and Complete Preservation of the bees (1860)"
+   ],
+   "seconds": 6.7
+  }
+ ],
+ "recorded": "2026-11-19",
+ "note": "Actions chosen by the model; every result is real output from the Library of Congress and Internet Archive services."
+}

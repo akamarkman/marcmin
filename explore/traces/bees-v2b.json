@@ -1,0 +1,320 @@
+{
+ "question": "How do honeybees choose a place to start a new hive?",
+ "model": "claude-haiku-5-5",
+ "cost_usd": 0.0039,
+ "steps": [
+  {
+   "n": 1,
+   "thought": "Start with a catalog keyword search on honeybee nest site selection to find records directly on the patron's question.",
+   "action": "search_catalog",
+   "args": {
+    "query": "honeybee nest site selection swarm"
+   },
+   "observation": "No records.",
+   "raw": [],
+   "seconds": 3.2
+  },
+  {
+   "n": 2,
+   "thought": "The keyword search returned nothing, so I'll check the subject heading for swarming behavior, which is the standard heading for how bees found new colonies.",
+   "action": "search_by_subject",
+   "args": {
+    "heading": "Honeybees--Swarming"
+   },
+   "observation": "[1] Queenspotting : meet the remarkable queen bee and discover the drama at the heart of the hive : includes 48 queenspotting challenges (2019) · class QL568.A6 · subjects: Queen honeybees--Behavior; Bees--Swarming\n[2] Queenspotting : meet the remarkable queen bee and discover the drama at the heart of the hive ; includes 48 queenspotting challenges (2019) · class QL568.A6 K378 2019 · subjects: Queen honeybees--Behavior; Bees--Swarming",
+   "raw": [
+    {
+     "title": "Queenspotting : meet the remarkable queen bee and discover the drama at the heart of the hive : includes 48 queenspotting challenges",
+     "year": "2019",
+     "class": "QL568.A6",
+     "lccn": "2019001347",
+     "subjects": [
+      "Queen honeybees--Behavior",
+      "Bees--Swarming"
+     ]
+    },
+    {
+     "title": "Queenspotting : meet the remarkable queen bee and discover the drama at the heart of the hive ; includes 48 queenspotting challenges",
+     "year": "2019",
+     "class": "QL568.A6 K378 2019",
+     "lccn": "2018061227",
+     "subjects": [
+      "Queen honeybees--Behavior",
+      "Bees--Swarming"
+     ]
+    }
+   ],
+   "seconds": 4.2
+  },
+  {
+   "n": 3,
+   "thought": "The swarming subject search returned only a queenspotting book, which is off-topic, so I'll check the sibling headings around Honeybees--Swarming for a better fit on colony site selection.",
+   "action": "sibling_headings",
+   "args": {
+    "heading": "Honeybees--Swarming"
+   },
+   "observation": "'Honeybees' is not an authorized heading; the authorized form is 'Honeybee'.\nSubdivisions of 'Honeybee': Honeybee--Artificial insemination; Honeybee--Behavior; Honeybee--Breeding; Honeybee--Diseases; Honeybee--Juvenile literature; Honeybee--Larvae; Honeybee--Parasites; Honeybee--Religious aspects\nBeside it in the heading tree (other narrower terms of Apis (Insects), Bees): Apis cerana; Pollination by bees; Photography of bees; Classification--Books--Bees; Libraries--Special collections--Bees; Andrenidae; Anthophoridae; Apidae; Carpenter bees; Colletidae; Halictidae; Megachilidae\nHeadings most often assigned with 'Honeybee' in 25 catalog records: Honeybee--Behavior (11); Honeybee--Diseases (8); Honeybee (6); Honeybee--Breeding (3); Honeybee--Anatomy (3); Honeybee--Physiology (2); Honeybee--Nervous system (2); Honeybee--Dissection (2); Honeybee--Predators of (2); Honeybee--Ecology (1)",
+   "raw": {
+    "heading": "Honeybees--Swarming",
+    "authorized": "Honeybee",
+    "subdivisions": [
+     "Honeybee--Artificial insemination",
+     "Honeybee--Behavior",
+     "Honeybee--Breeding",
+     "Honeybee--Diseases",
+     "Honeybee--Juvenile literature",
+     "Honeybee--Larvae",
+     "Honeybee--Parasites",
+     "Honeybee--Religious aspects"
+    ],
+    "tree_siblings": [
+     "Apis cerana",
+     "Pollination by bees",
+     "Photography of bees",
+     "Classification--Books--Bees",
+     "Libraries--Special collections--Bees",
+     "Andrenidae",
+     "Anthophoridae",
+     "Apidae",
+     "Carpenter bees",
+     "Colletidae",
+     "Halictidae",
+     "Megachilidae"
+    ],
+    "co_assigned": [
+     [
+      "Honeybee--Behavior",
+      11
+     ],
+     [
+      "Honeybee--Diseases",
+      8
+     ],
+     [
+      "Honeybee",
+      6
+     ],
+     [
+      "Honeybee--Breeding",
+      3
+     ],
+     [
+      "Honeybee--Anatomy",
+      3
+     ],
+     [
+      "Honeybee--Physiology",
+      2
+     ],
+     [
+      "Honeybee--Nervous system",
+      2
+     ],
+     [
+      "Honeybee--Dissection",
+      2
+     ],
+     [
+      "Honeybee--Predators of",
+      2
+     ],
+     [
+      "Honeybee--Ecology",
+      1
+     ]
+    ]
+   },
+   "seconds": 7.4
+  },
+  {
+   "n": 4,
+   "thought": "Honeybee--Swarming isn't an authorized heading, and the swarming hits are off-topic. Honeybee--Behavior is the most common heading on the Honeybee records, so I'll search it for material on colony founding and nest choice.",
+   "action": "search_by_subject",
+   "args": {
+    "heading": "Honeybee--Behavior"
+   },
+   "observation": "[1] The song of increase : returning to our sacred partnership with honeybees (2014) · class QL568.A6 F565 2014 · subjects: Honeybee--Behavior\n[2] The world of the honeybee (1974) · class QL568.A6 B84 1974 · subjects: Honeybee; Honeybee--Behavior\n[3] The world of the honeybee. With 2 colour photos. and 87 black and white photos. taken by the author (1954) · class QL568.A6 B84 1954 · subjects: Honeybee; Honeybee--Behavior\n[4] The honey bee : understanding the ultimate engineer (2020) · class QL568.A6 C73 2020 · subjects: Honeybee; Honeybee--Behavior; Honeybee--Ecology\n[5] The wisdom of the hive : the social physiology of honey bee colonies (1995) · class QL568.A6 S445 1995 · subjects: Honeybee--Food; Honeybee--Behavior\n[6] The reproductive behaviour of European honeybee colonies : a lecture given to the Central Association of Bee-keepers on 14th March 1974 (1974) · class SF531.5 .S55 · subjects: Honeybee--Breeding; Honeybee--Behavior\n[7] Honeybees : foraging behavior, reproductive biology and diseases (2014) · class QL568.A6 H5625 2014 · subjects: Honeybee--Behavior; Honeybee--Diseases\n[8] Honeybees : foraging behavior, reproductive biology and diseases (2014) · class QL568.A6 · subjects: Honeybee--Behavior; Honeybee--Diseases",
+   "raw": [
+    {
+     "title": "The song of increase : returning to our sacred partnership with honeybees",
+     "year": "2014",
+     "class": "QL568.A6 F565 2014",
+     "lccn": "2014921269",
+     "subjects": [
+      "Honeybee--Behavior"
+     ]
+    },
+    {
+     "title": "The world of the honeybee",
+     "year": "1974",
+     "class": "QL568.A6 B84 1974",
+     "lccn": "75309307",
+     "subjects": [
+      "Honeybee",
+      "Honeybee--Behavior"
+     ]
+    },
+    {
+     "title": "The world of the honeybee. With 2 colour photos. and 87 black and white photos. taken by the author",
+     "year": "1954",
+     "class": "QL568.A6 B84 1954",
+     "lccn": "54012293",
+     "subjects": [
+      "Honeybee",
+      "Honeybee--Behavior"
+     ]
+    },
+    {
+     "title": "The honey bee : understanding the ultimate engineer",
+     "year": "2020",
+     "class": "QL568.A6 C73 2020",
+     "lccn": "2019452769",
+     "subjects": [
+      "Honeybee",
+      "Honeybee--Behavior",
+      "Honeybee--Ecology"
+     ]
+    },
+    {
+     "title": "The wisdom of the hive : the social physiology of honey bee colonies",
+     "year": "1995",
+     "class": "QL568.A6 S445 1995",
+     "lccn": "95003645",
+     "subjects": [
+      "Honeybee--Food",
+      "Honeybee--Behavior"
+     ]
+    },
+    {
+     "title": "The reproductive behaviour of European honeybee colonies : a lecture given to the Central Association of Bee-keepers on 14th March 1974",
+     "year": "1974",
+     "class": "SF531.5 .S55",
+     "lccn": "75318537",
+     "subjects": [
+      "Honeybee--Breeding",
+      "Honeybee--Behavior"
+     ]
+    },
+    {
+     "title": "Honeybees : foraging behavior, reproductive biology and diseases",
+     "year": "2014",
+     "class": "QL568.A6 H5625 2014",
+     "lccn": "2013045185",
+     "subjects": [
+      "Honeybee--Behavior",
+      "Honeybee--Diseases"
+     ]
+    },
+    {
+     "title": "Honeybees : foraging behavior, reproductive biology and diseases",
+     "year": "2014",
+     "class": "QL568.A6",
+     "lccn": "2020688455",
+     "subjects": [
+      "Honeybee--Behavior",
+      "Honeybee--Diseases"
+     ]
+    }
+   ],
+   "seconds": 3.9
+  },
+  {
+   "n": 5,
+   "thought": "The Honeybee--Behavior hits are mostly modern general books, and none is clearly about nest-site choice, so I'll search the catalog for the specific subject of colony founding and swarm nest selection.",
+   "action": "search_catalog",
+   "args": {
+    "query": "honeybee swarm nest site choice scout bees"
+   },
+   "observation": "No records.",
+   "raw": [],
+   "seconds": 2.9
+  },
+  {
+   "n": 6,
+   "thought": "The catalog has no records on nest-site choice, so I'll search public-domain books at the Internet Archive for older beekeeping texts on swarm settling and nest selection.",
+   "action": "find_free_text",
+   "args": {
+    "query": "subject:(honeybee OR bees) AND (swarm OR swarming OR \"nest site\" OR \"choice of a home\")"
+   },
+   "observation": "[beekeeperstextb00kinggoog] The bee-keeper's text-book with alphabetical index, being a complete reference book on all practical (1867)\n[cu31924003692435] The relation of phototropism to swarming in the honey-bee, Apis mellifera L. (1920)\n[acompleteguidet01whitgoog] A complete guide to the mystery and management of bees (1852)\n[amanualoraneasy00weekgoog] A Manual, Or an Easy Method of Managing Bees, in the Most Profitable Manner ... (1840)\n[amanualrational00ribegoog] A manual of rational bee-keeping, tr. by A.F.G.L. Gower (1879)",
+   "raw": [
+    {
+     "creator": [
+      "King, N. H",
+      "King, Homer A",
+      "Charles C. Miller Memorial Apicultural Library WU"
+     ],
+     "date": "1867-01-01T00:00:00Z",
+     "identifier": "beekeeperstextb00kinggoog",
+     "title": "The bee-keeper's text-book with alphabetical index, being a complete reference book on all practical subjects connected with the culture of the honey bee in both common and movable-comb hives, giving minute directions for the management of bees in every month of the year, and illustrating the nucleus system of swarming and Italian queen rearing"
+    },
+    {
+     "creator": "Minnich, Dwight Elmer, 1890-",
+     "date": "1920-01-01T00:00:00Z",
+     "identifier": "cu31924003692435",
+     "title": "The relation of phototropism to swarming in the honey-bee, Apis mellifera L."
+    },
+    {
+     "creator": "William White",
+     "date": "1852-01-01T00:00:00Z",
+     "identifier": "acompleteguidet01whitgoog",
+     "title": "A complete guide to the mystery and management of bees"
+    },
+    {
+     "creator": "John Moseley Weeks",
+     "date": "1840-01-01T00:00:00Z",
+     "identifier": "amanualoraneasy00weekgoog",
+     "title": "A Manual, Or an Easy Method of Managing Bees, in the Most Profitable Manner ..."
+    },
+    {
+     "creator": "C de Ribeaucourt",
+     "date": "1879-01-01T00:00:00Z",
+     "identifier": "amanualrational00ribegoog",
+     "title": "A manual of rational bee-keeping, tr. by A.F.G.L. Gower"
+    }
+   ],
+   "seconds": 2.7
+  },
+  {
+   "n": 7,
+   "thought": "The 1920 phototropism and swarming paper and the 1852 and 1840 bee manuals look most likely to discuss how swarms settle on a new home, so I'll read the 1852 guide for its passages on choosing a site.",
+   "action": "read_text",
+   "args": {
+    "identifier": "acompleteguidet01whitgoog",
+    "question": "How do swarms choose a place to settle and start a new hive? What site features do bees prefer?"
+   },
+   "observation": "A complete guide to the mystery and management of bees\n(page 25 of the scan) and then thezy will run in with remarkable cheerfulness ; then turn out the rest of the bees upon the cloth, a few at a time, a^^out as man;y as you can hold in both your hands, and about a foot from the hive ; then YOU will have an opportunity of see- ins them run, as it were sheep into a fold ; and may easily discern their Governors runniner stately alons the cloth, but, if there are more than one, take the super- numerary ones UP, and put them into a box, with a hole in the lid, as before di- rected, until you have them all. some- times there will be three, sometimes four, sometimes six. When you have Got them all, divide the bees into as many parts as there are Governors, then put theoovernors to the parts of bees so divided ; this being done, take stocks that are full of bees, and strike them Gently on the outside of the hive, and so turn them all out into empty hives, the same as a\n\n(page 9 of the scan) But, to prevent inconvenience, hives should be made of every size, so as to suit different swarms, either oreat or small. Some hives will contain five pecks, with a swarm yearly, and last, by succession, loneer than those that are hived in small hives. But although a half-bushel hive will contain a competent stock. Yet the swarms, for the most part, are small, and the castlinss of themselves worth nothing ; and the bees that are commonly left, when they have cast twice, are so few, that they quickly miscarry : therefore, let your hives be rather too little than too great ; for if they are made too large, the bees will be more lazy, and work uncomfort- ably, because they despair ever to finish and furnish their house ; for which reason,",
+   "raw": {
+    "identifier": "acompleteguidet01whitgoog",
+    "title": "A complete guide to the mystery and management of bees",
+    "url": "https://archive.org/details/acompleteguidet01whitgoog",
+    "passages": [
+     {
+      "page": 25,
+      "text": "and then thezy will run in with remarkable cheerfulness ; then turn out the rest of the bees upon the cloth, a few at a time, a^^out as man;y as you can hold in both your hands, and about a foot from the hive ; then YOU will have an opportunity of see- ins them run, as it were sheep into a fold ; and may easily discern their Governors runniner stately alons the cloth, but, if there are more than one, take the super- numerary ones UP, and put them into a box, with a hole in the lid, as before di- rected, until you have them all. some- times there will be three, sometimes four, sometimes six. When you have Got them all, divide the bees into as many parts as there are Governors, then put theoovernors to the parts of bees so divided ; this being done, take stocks that are full of bees, and strike them Gently on the outside of the hive, and so turn them all out into empty hives, the same as a"
+     },
+     {
+      "page": 9,
+      "text": "But, to prevent inconvenience, hives should be made of every size, so as to suit different swarms, either oreat or small. Some hives will contain five pecks, with a swarm yearly, and last, by succession, loneer than those that are hived in small hives. But although a half-bushel hive will contain a competent stock. Yet the swarms, for the most part, are small, and the castlinss of themselves worth nothing ; and the bees that are commonly left, when they have cast twice, are so few, that they quickly miscarry : therefore, let your hives be rather too little than too great ; for if they are made too large, the bees will be more lazy, and work uncomfort- ably, because they despair ever to finish and furnish their house ; for which reason,"
+     }
+    ]
+   },
+   "seconds": 3.8
+  },
+  {
+   "n": 8,
+   "thought": "Two catalog searches and one subject browse found nothing on nest-site choice, and the two passages I read covered queen-gathering and hive sizing, not site selection, so I'm stopping here rather than spending the last step on a guess.",
+   "action": "answer",
+   "answer": "The catalog has no records on how honeybees choose a nest site, and the public-domain passages I read don't answer the question. The 1852 guide (A complete guide to the mystery and management of bees, p. 25) describes gathering a swarm's queens onto a cloth, and p. 9 advises on hive sizes for swarms. Neither says where bees settle. From general knowledge, not from these sources, scout bees search for cavities of roughly a few liters with small entrances, and the swarm decides collectively through waggle-dance advocacy. Modern books such as The honey bee: understanding the ultimate engineer (2020) and The wisdom of the hive (1995) probably cover this, but I haven't read them.",
+   "records": [
+    "The honey bee : understanding the ultimate engineer (2020), QL568.A6 C73 2020",
+    "The wisdom of the hive : the social physiology of honey bee colonies (1995), QL568.A6 S445 1995",
+    "Honeybees : foraging behavior, reproductive biology and diseases (2014), QL568.A6 H5625 2014",
+    "A complete guide to the mystery and management of bees (1852), public domain, read for this question but not on site choice"
+   ],
+   "seconds": 6.3
+  }
+ ],
+ "recorded": "2026-11-19",
+ "note": "Actions chosen by the model; every result is real output from the Library of Congress and Internet Archive services."
+}

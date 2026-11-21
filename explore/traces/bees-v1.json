@@ -1,0 +1,251 @@
+{
+ "question": "How do honeybees choose a place to start a new hive?",
+ "model": "claude-haiku-5-5",
+ "cost_usd": 0.004,
+ "steps": [
+  {
+   "n": 1,
+   "thought": "Start with a catalog keyword search on honeybee nest-site selection to find good records and their subject headings.",
+   "action": "search_catalog",
+   "args": {
+    "query": "honeybee nest site selection swarm"
+   },
+   "observation": "No records.",
+   "raw": [],
+   "seconds": 4.7
+  },
+  {
+   "n": 2,
+   "thought": "The keyword search returned nothing, so I'll try a broader, more common phrasing and look for a subject heading I can browse from.",
+   "action": "search_by_subject",
+   "args": {
+    "heading": "Honeybees--Nests"
+   },
+   "observation": "[1] Honeybee nests : composition, structure, function (2014) · class QL568.A6 H394 2014 · subjects: Honeybee--Nests; Beeswax; Honeycombs; Bioenergetics; Honeybee--Behavior",
+   "raw": [
+    {
+     "title": "Honeybee nests : composition, structure, function",
+     "year": "2014",
+     "class": "QL568.A6 H394 2014",
+     "lccn": "2014931509",
+     "subjects": [
+      "Honeybee--Nests",
+      "Beeswax",
+      "Honeycombs",
+      "Bioenergetics",
+      "Honeybee--Behavior"
+     ]
+    }
+   ],
+   "seconds": 4.4
+  },
+  {
+   "n": 3,
+   "thought": "The subject heading Honeybees--Nests is a good hit, so I'll browse its broader, narrower and related headings to find better terms for how colonies choose a nest site.",
+   "action": "browse_heading",
+   "args": {
+    "heading": "Honeybees--Nests"
+   },
+   "observation": "No heading found for 'Honeybees--Nests'.",
+   "raw": {},
+   "seconds": 4.6
+  },
+  {
+   "n": 4,
+   "thought": "The browse failed because \"Honeybees--Nests\" isn't an authorized heading, so I'll search by the likely LCSH term for colony founding, \"Swarming (Bees)\", which should cover how a colony chooses a new home.",
+   "action": "search_by_subject",
+   "args": {
+    "heading": "Swarming (Bees)"
+   },
+   "observation": "[1] Swarming of bees (1970) · class S217 .A6132 no. 206 · subjects: Bees--Swarming\n[2] Swarm control survey (1946) · class SF525 .B4 · subjects: Bees--Swarming--Prevention\n[3] Removal of bees and wasps (1971) · class S155 .A47 no. 157 SB945.W3 · subjects: Wasps--Control; Bees--Swarming\n[4] Queenspotting : meet the remarkable queen bee and discover the drama at the heart of the hive : includes 48 queenspotting challenges (2019) · class QL568.A6 · subjects: Queen honeybees--Behavior; Bees--Swarming\n[5] Swarmed by bees (2010) · class QL565.2 .H355 2010 · subjects: Bee attacks--Juvenile literature; Bees--Swarming--Juvenile literature; Bee attacks; Bees--Swarming\n[6] Queenspotting : meet the remarkable queen bee and discover the drama at the heart of the hive ; includes 48 queenspotting challenges (2019) · class QL568.A6 K378 2019 · subjects: Queen honeybees--Behavior; Bees--Swarming",
+   "raw": [
+    {
+     "title": "Swarming of bees",
+     "year": "1970",
+     "class": "S217 .A6132 no. 206",
+     "lccn": "70593567",
+     "subjects": [
+      "Bees--Swarming"
+     ]
+    },
+    {
+     "title": "Swarm control survey",
+     "year": "1946",
+     "class": "SF525 .B4",
+     "lccn": "47027580",
+     "subjects": [
+      "Bees--Swarming--Prevention"
+     ]
+    },
+    {
+     "title": "Removal of bees and wasps",
+     "year": "1971",
+     "class": "S155 .A47 no. 157 SB945.W3",
+     "lccn": "72176172",
+     "subjects": [
+      "Wasps--Control",
+      "Bees--Swarming"
+     ]
+    },
+    {
+     "title": "Queenspotting : meet the remarkable queen bee and discover the drama at the heart of the hive : includes 48 queenspotting challenges",
+     "year": "2019",
+     "class": "QL568.A6",
+     "lccn": "2019001347",
+     "subjects": [
+      "Queen honeybees--Behavior",
+      "Bees--Swarming"
+     ]
+    },
+    {
+     "title": "Swarmed by bees",
+     "year": "2010",
+     "class": "QL565.2 .H355 2010",
+     "lccn": "2009045598",
+     "subjects": [
+      "Bee attacks--Juvenile literature",
+      "Bees--Swarming--Juvenile literature",
+      "Bee attacks",
+      "Bees--Swarming"
+     ]
+    },
+    {
+     "title": "Queenspotting : meet the remarkable queen bee and discover the drama at the heart of the hive ; includes 48 queenspotting challenges",
+     "year": "2019",
+     "class": "QL568.A6 K378 2019",
+     "lccn": "2018061227",
+     "subjects": [
+      "Queen honeybees--Behavior",
+      "Bees--Swarming"
+     ]
+    }
+   ],
+   "seconds": 3.7
+  },
+  {
+   "n": 5,
+   "thought": "The catalog hits are mostly about swarm control and queen behavior, not how a swarm picks its new home. I'll search public-domain texts for swarm nest-site selection to find period passages on the topic.",
+   "action": "find_free_text",
+   "args": {
+    "query": "subject:(bees swarming) OR subject:(honeybee nest) swarm new home selection scouts"
+   },
+   "observation": "No public-domain texts found.",
+   "raw": [],
+   "seconds": 3.4
+  },
+  {
+   "n": 6,
+   "thought": "The long compound query returned nothing, so I'll retry public-domain texts with a simpler keyword query on swarming bees, which should match older beekeeping books that describe how swarms choose a home.",
+   "action": "find_free_text",
+   "args": {
+    "query": "subject:(bees) AND swarm"
+   },
+   "observation": "[cu31924062872969] Swarm control (1921)\n[cu31924024566022] The swarm, from The life of the bee (1906)\n[swarmfromlifeofb00maet] The swarm : from The life of the bee (1906)\n[birdsandbeesess00burrgoog] Birds and Bees: Essays (1887)\n[birdsandbeessha00burtgoog] ... Birds and Bees: Sharp Eyes and Other Papers (1907)",
+   "raw": [
+    {
+     "creator": "Demuth, Geo. S. (George S.)",
+     "date": "1921-01-01T00:00:00Z",
+     "identifier": "cu31924062872969",
+     "title": "Swarm control"
+    },
+    {
+     "creator": [
+      "Maeterlinck, Maurice, 1862-1949",
+      "Sutro, Alfred, 1863-1933. tr"
+     ],
+     "date": "1906-01-01T00:00:00Z",
+     "identifier": "cu31924024566022",
+     "title": "The swarm, from The life of the bee"
+    },
+    {
+     "creator": [
+      "Maeterlinck, Maurice, 1862-1949",
+      "Sutro, Alfred, 1863-1933 tr"
+     ],
+     "date": "1906-01-01T00:00:00Z",
+     "identifier": "swarmfromlifeofb00maet",
+     "title": "The swarm : from The life of the bee"
+    },
+    {
+     "creator": "John Burroughs",
+     "date": "1887-01-01T00:00:00Z",
+     "identifier": "birdsandbeesess00burrgoog",
+     "title": "Birds and Bees: Essays"
+    },
+    {
+     "creator": "John Burroughs, Mary Elzabeth Burt",
+     "date": "1907-01-01T00:00:00Z",
+     "identifier": "birdsandbeessha00burtgoog",
+     "title": "... Birds and Bees: Sharp Eyes and Other Papers"
+    }
+   ],
+   "seconds": 3.8
+  },
+  {
+   "n": 7,
+   "thought": "The Maeterlinck chapter \"The Swarm\" from The Life of the Bee (1906) is the most likely public-domain source on how scouts pick a new home, so I'll read its relevant passages.",
+   "action": "read_text",
+   "args": {
+    "identifier": "swarmfromlifeofb00maet",
+    "question": "How do scout bees search for and choose a new home for the swarm, and how does the swarm decide among sites?"
+   },
+   "observation": "The swarm : from The life of the bee\n(page 34 of the scan) But if the swarm be not gathered by man, its history will not end here. It will remain suspended on the branch until the return of the workers, who act- ing as scouts, winged quartermasters, as it were, have at the very first moment of swarming sallied forth in all directions in ____. search of a lodging. They return one bv, one, and render account of their mission; [ 111 ]\n\n(page 33 of the scan) gather the swarm by vigorously shaking the bough from which the bees depend over an inverted hive. Into this hive the cluster will fall as heavily as an over-ripe fruit. Or, if the branch be too stout, he can plunge a spoon into the mass; and deposit where he will the living spoon- fuls, as though he were ladling out corn. He need have no fear of the bees that are buzzing around him, settling on his face and hands. The air resounds with their song of ecstasy, which is different from their chant of anger. He need have V ^ no fear that the swarm will divide, or-^^^*^-^",
+   "raw": {
+    "identifier": "swarmfromlifeofb00maet",
+    "title": "The swarm : from The life of the bee",
+    "url": "https://archive.org/details/swarmfromlifeofb00maet",
+    "passages": [
+     {
+      "page": 34,
+      "text": "But if the swarm be not gathered by man, its history will not end here. It will remain suspended on the branch until the return of the workers, who act- ing as scouts, winged quartermasters, as it were, have at the very first moment of swarming sallied forth in all directions in ____. search of a lodging. They return one bv, one, and render account of their mission; [ 111 ]"
+     },
+     {
+      "page": 33,
+      "text": "gather the swarm by vigorously shaking the bough from which the bees depend over an inverted hive. Into this hive the cluster will fall as heavily as an over-ripe fruit. Or, if the branch be too stout, he can plunge a spoon into the mass; and deposit where he will the living spoon- fuls, as though he were ladling out corn. He need have no fear of the bees that are buzzing around him, settling on his face and hands. The air resounds with their song of ecstasy, which is different from their chant of anger. He need have V ^ no fear that the swarm will divide, or-^^^*^-^"
+     }
+    ]
+   },
+   "seconds": 9.5
+  },
+  {
+   "n": 8,
+   "thought": "The first read returned only a fragment about scouts reporting back, so I'll re-read the same book with a narrower question about how the scouts' reports lead the swarm to pick one site.",
+   "action": "read_text",
+   "args": {
+    "identifier": "swarmfromlifeofb00maet",
+    "question": "After the scout bees return and report on the sites they found, how does the swarm reach a collective decision and choose one new home?"
+   },
+   "observation": "The swarm : from The life of the bee\n(page 15 of the scan) haps unconscious sacrifice the god has ordained; it is the festival of honey, the triumph of the race, the victory of the future: the one day of joy, of forgetful- ^ness and folly; the only Sunday known 'mo the bees. It would appear to be also the solitary day upon which all eat their fill, and revel, to heart's content, in the delights of the treasure themselves have amassed. It is as though they were prisoners to whom freedom at last had been given, who had suddenly been led to a land of refreshment and plenty. They exult, they cannot contain the joy that is in them. They come and go aim- lessly,— they whose every movement has always its precise and useful purpose — they depart and return, sally forth once 4 . [ 49 ]\n\n(page 34 of the scan) But if the swarm be not gathered by man, its history will not end here. It will remain suspended on the branch until the return of the workers, who act- ing as scouts, winged quartermasters, as it were, have at the very first moment of swarming sallied forth in all directions in ____. search of a lodging. They return one bv, one, and render account of their mission; [ 111 ]",
+   "raw": {
+    "identifier": "swarmfromlifeofb00maet",
+    "title": "The swarm : from The life of the bee",
+    "url": "https://archive.org/details/swarmfromlifeofb00maet",
+    "passages": [
+     {
+      "page": 15,
+      "text": "haps unconscious sacrifice the god has ordained; it is the festival of honey, the triumph of the race, the victory of the future: the one day of joy, of forgetful- ^ness and folly; the only Sunday known 'mo the bees. It would appear to be also the solitary day upon which all eat their fill, and revel, to heart's content, in the delights of the treasure themselves have amassed. It is as though they were prisoners to whom freedom at last had been given, who had suddenly been led to a land of refreshment and plenty. They exult, they cannot contain the joy that is in them. They come and go aim- lessly,— they whose every movement has always its precise and useful purpose — they depart and return, sally forth once 4 . [ 49 ]"
+     },
+     {
+      "page": 34,
+      "text": "But if the swarm be not gathered by man, its history will not end here. It will remain suspended on the branch until the return of the workers, who act- ing as scouts, winged quartermasters, as it were, have at the very first moment of swarming sallied forth in all directions in ____. search of a lodging. They return one bv, one, and render account of their mission; [ 111 ]"
+     }
+    ]
+   },
+   "seconds": 3.9
+  },
+  {
+   "n": 9,
+   "thought": "I've used all nine steps, and the only relevant public-domain passages describe scouts searching and reporting back, not how the swarm decides.",
+   "action": "answer",
+   "answer": "Maeterlinck's account of swarming describes scout bees, which leave the hanging swarm at its first moment, search in all directions for a lodging, and return one by one to report on what they found (The Swarm: from The Life of the Bee, p. 34 of scan). The passages I read stop there and do not explain how the swarm weighs those reports and settles on one site. This book dates from 1906 and is a literary naturalist's account, so it is out of date on the mechanism; later research on honeybee scouts (such as waggle dancing and collective voting) is not in these sources and should be checked in a modern text. The catalog search for nest-site choice returned no direct hits, so the best next step is a modern book on swarm biology.",
+   "records": [
+    "Honeybee nests: composition, structure, function (2014), QL568.A6 H394 2014",
+    "Swarming of bees (1970), S217 .A6132 no. 206",
+    "Queenspotting: meet the remarkable queen bee and discover the drama at the heart of the hive (2019), QL568.A6 K378 2019"
+   ],
+   "seconds": 5.8
+  }
+ ],
+ "recorded": "2026-11-19",
+ "note": "Actions chosen by the model; every result is real output from the Library of Congress and Internet Archive services."
+}
